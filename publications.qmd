@@ -8,6 +8,10 @@ Author's accepted or published versions are linked where the publisher permits. 
 ## Journal articles
 
 ::: {.pub}
+[Bozdağ, F. Ü.]{.me} (in press). Native and learner verb preferences as predictors of passive use in L2 English writing. *Language and Cognition*. <https://doi.org/10.1017/langcog.2026.10131> [[data](https://osf.io/zt9md/)]{.links} [SSCI · in press]{.tag}
+:::
+
+::: {.pub}
 [Bozdağ, F. Ü.]{.me} (2026). Modeling distributional stability in learner English passives: The Linguistic Clusters Framework. *Corpus Linguistics and Linguistic Theory*, *23*(3). <https://doi.org/10.1515/cllt-2025-0141> [[pdf](files/papers/bozdag-2026-cllt-linguistic-clusters.pdf) [code](https://github.com/fatihbozdag/linguistic_clusters) [data](https://osf.io/kq7gv/)]{.links} [SSCI · open access]{.tag}
 :::
 
@@ -62,7 +66,7 @@ Author's accepted or published versions are linked where the publisher permits. 
 ## Books
 
 ::: {.pub}
-[Bozdağ, F. Ü.]{.me} (2026). *Turkish aspect through Cognitive Grammar*. Artsürem. ISBN 978-625-93340-7-3. 249 pp.
+[Bozdağ, F. Ü.]{.me} (2026). *Turkish aspect through Cognitive Grammar*. Artsürem. ISBN 978-625-93340-7-3. 249 pp. [[publisher](https://artsurem.tr/index.php/books/tr/catalog/book/15)]{.links}
 :::
 
 ## Book chapters

@@ -25,7 +25,7 @@ I am a linguist working at the intersection of corpus linguistics, Cognitive Lin
 Three threads run through my research:
 
 - **Usage-based accounts of learner grammar.** Constructional transfer, formulaicity and distributional stability in L2 English — modal verbs, passives, dative constructions, tense–aspect, hedging and metadiscourse — studied with corpus data (ICLE, EFCAMDAT, TICLE) and multilevel or Bayesian models.
-- **Turkish from a Cognitive Grammar perspective.** Aspect and progressivity, embedded locative constructions, and grammaticalisation of motion and posture verbs across Turkic languages. My book *Turkish Aspect through Cognitive Grammar* (Artsürem, 2026) brings this line together.
+- **Turkish from a Cognitive Grammar perspective.** Aspect and progressivity, embedded locative constructions, and grammaticalisation of motion and posture verbs across Turkic languages. My book [*Turkish Aspect through Cognitive Grammar*](https://artsurem.tr/index.php/books/tr/catalog/book/15) (Artsürem, 2026) brings this line together.
 - **Tools for corpus research.** Reproducible Python pipelines for construction detection, metadiscourse annotation, lexical and syntactic complexity, and computational stylometry ([bitig](https://github.com/fatihbozdag/bitig)). Code and data for my studies are released where copyright allows.
 
 I teach discourse analysis, translation technology (CAT tools), medical and legal translation, and academic writing in the English Translation and Interpretation programme.
@@ -38,6 +38,7 @@ I teach discourse analysis, translation technology (CAT tools), medical and lega
 
 ## Selected recent work
 
+- Bozdağ, F. Ü. (in press). Native and learner verb preferences as predictors of passive use in L2 English writing. *Language and Cognition*. [doi](https://doi.org/10.1017/langcog.2026.10131) · [data](https://osf.io/zt9md/)
 - Bozdağ, F. Ü. (2026). Modeling distributional stability in learner English passives: The Linguistic Clusters Framework. *Corpus Linguistics and Linguistic Theory*, 23(3). [doi](https://doi.org/10.1515/cllt-2025-0141) · [pdf](files/papers/bozdag-2026-cllt-linguistic-clusters.pdf) · [code](https://github.com/fatihbozdag/linguistic_clusters) · [data](https://osf.io/kq7gv/)
 - Bozdağ, F. Ü., & Mo, J. (2026). Cross-linguistic influence in upper-intermediate to advanced L2 construction learning. *Lingua*, 341, 104239. [doi](https://doi.org/10.1016/j.lingua.2026.104239)
 - Bozdağ, F. Ü., Morris, G., & Mo, J. (2025). A corpus-based analysis of noun modifiers in L2 writing: The respective impact of L2 proficiency and L1 background. *PLOS ONE*, 20(3), e0320092. [doi](https://doi.org/10.1371/journal.pone.0320092) · [pdf](files/papers/bozdag-morris-mo-2025-plosone-noun-modifiers.pdf)

@@ -35,7 +35,7 @@ Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Tra
 ## Open to-dos
 
 1. Replace placeholder profile image with a real photo (`images/profile.jpg`, ~400×400, <200 KB).
-2. Add the *Language and Cognition* article (DOI 10.1017/langcog.2026.10131) to `publications.qmd` and `pubs/bozdag.bib` when it appears online (Vol. 18, 2026, e-number; continuous publication).
+2. *Language and Cognition* article (DOI 10.1017/langcog.2026.10131) is listed as "in press" since 29 Oct 2026. When it appears online, replace "in press" with 2026, add the volume (18) and e-number in `publications.qmd`, `index.qmd` and `pubs/bozdag.bib`.
 3. Add the Lotus Congress 2026 abstract-book details when published.
 4. Add the website URL to ORCID, Google Scholar, GitHub profile (`blog` field) and YÖK Akademik. Must be done by hand: the `gh` token lacks the `user` scope and the browser is not signed in to these services.
 5. Optional: author post-prints. Lingua: Elsevier allows the accepted manuscript on a personal website immediately, with a CC BY-NC-ND notice and a link to the DOI (checked 29 Oct 2026); needs the author's accepted-manuscript file. Chapters: check each publisher.
@@ -45,4 +45,4 @@ Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Tra
 
 - ORCID 0000-0002-9959-4704 · Google Scholar user W_xdrwwAAAAJ · GitHub fatihbozdag · e-mail fatihbozdag@osmaniye.edu.tr
 - Related repos listed on the Tools page: bitig, linguistic_clusters, metadiscourse_analysis, passive_detection, annotator, Grammar-Research-with-Spacy, lexical_complexity.
-- OSF profile https://osf.io/vz746/ (public projects: kq7gv = CLLT 2026 Linguistic Clusters, bg39s = Lingua 2026 CLI, zt9md = passive verb preferences). A second, empty account (8guxd) exists. Never link `view_only` URLs on the site.
+- OSF profile https://osf.io/vz746/ (public projects: kq7gv = CLLT 2026 Linguistic Clusters, bg39s = Lingua 2026 CLI, zt9md = Language and Cognition passive verb preferences). A second, empty account (8guxd) exists. Never link `view_only` URLs on the site.

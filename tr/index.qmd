@@ -11,7 +11,7 @@ Derlem dilbilimi, Bilişsel Dilbilim ve doğal dil işlemenin kesişiminde çal�
 Üç ana çalışma alanı:
 
 - **Kullanım temelli öğrenici dilbilgisi.** Kiplik fiilleri, edilgen yapılar, datif yapılar, zaman–görünüş, kaçınma ve üstsöylem öğelerinde yapısal aktarım, kalıplaşma ve dağılımsal kararlılık.
-- **Bilişsel Dilbilgisi açısından Türkçe.** Görünüş ve sürerlilik, gömülü konum yapıları, Türk dillerinde hareket ve duruş fiillerinin gramatikleşmesi. *Turkish Aspect through Cognitive Grammar* (Artsürem, 2026) bu çizginin toplu ürünü.
+- **Bilişsel Dilbilgisi açısından Türkçe.** Görünüş ve sürerlilik, gömülü konum yapıları, Türk dillerinde hareket ve duruş fiillerinin gramatikleşmesi. [*Turkish Aspect through Cognitive Grammar*](https://artsurem.tr/index.php/books/tr/catalog/book/15) (Artsürem, 2026) bu çizginin toplu ürünü.
 - **Derlem araştırması için araçlar.** Yapı tespiti, üstsöylem etiketleme, sözcüksel ve sözdizimsel karmaşıklık ölçümü ve hesaplamalı biçembilim ([bitig](https://github.com/fatihbozdag/bitig)) için Python boru hatları; kod ve veriler telif izin verdiği ölçüde açık.
 
 Bölümde söylem çözümlemesi, bilgisayar destekli çeviri, tıp ve hukuk çevirisi, yerelleştirme ve toplum çevirmenliği dersleri veriyorum.
