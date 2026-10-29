@@ -37,7 +37,7 @@ Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Tra
 1. Replace placeholder profile image with a real photo (`images/profile.jpg`, ~400×400, <200 KB).
 2. *Language and Cognition* article (DOI 10.1017/langcog.2026.10131) is listed as "in press" since 29 Oct 2026. When it appears online, replace "in press" with 2026, add the volume (18) and e-number in `publications.qmd`, `index.qmd` and `pubs/bozdag.bib`.
 3. Add the Lotus Congress 2026 abstract-book details when published.
-4. Add the website URL to ORCID, Google Scholar, GitHub profile (`blog` field) and YÖK Akademik. Must be done by hand: the `gh` token lacks the `user` scope and the browser is not signed in to these services.
+4. Add the website URL to ORCID, Google Scholar and YÖK Akademik (needs the author's logins). GitHub profile `blog` field set 30 Oct 2026.
 5. Optional: author post-prints for book chapters, if each publisher allows (Lingua accepted manuscript posted 30 Oct 2026).
 6. Optional: a short "News" or "Talks" list; no blog unless it will be maintained.
 
