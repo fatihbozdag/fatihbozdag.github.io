@@ -28,11 +28,15 @@ h3 { font-size: 1.15rem; margin-top: 1.6rem; }
 
 /* publication entries */
 .pub { margin: 0 0 1.1rem 0; padding-left: 1.6rem; text-indent: -1.6rem; }
-.pub .links { text-indent: 0; display: inline-block; margin-left: 0.4rem; white-space: nowrap; }
-.pub .links a { font-size: 0.82rem; border: 1px solid #c9d2df; border-radius: 0.25rem; padding: 0.05rem 0.45rem; margin-right: 0.3rem; text-decoration: none; color: $primary; }
+.pub .links { margin-left: 0.3rem; }
+.pub .links a { display: inline-block; text-indent: 0; white-space: nowrap; font-size: 0.82rem; line-height: 1.4; border: 1px solid #c9d2df; border-radius: 0.25rem; padding: 0.05rem 0.45rem; margin: 0.1rem 0.3rem 0.1rem 0; text-decoration: none; color: $primary; }
 .pub .links a:hover { background: #eef2f7; }
-.pub .tag { font-size: 0.78rem; color: #6b7280; margin-left: 0.3rem; }
+.pub .tag { font-size: 0.78rem; color: #6b7280; margin-left: 0.1rem; white-space: nowrap; }
 .pub .me { font-weight: 600; }
+
+/* long unbroken strings (URLs, e-mail) may wrap rather than widen the page */
+main a { overflow-wrap: anywhere; }
+.pub .links a { overflow-wrap: normal; }
 
 /* about page */
 .about-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: start; }
