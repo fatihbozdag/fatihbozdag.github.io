@@ -1,0 +1,49 @@
+# fatihbozdag.com — project notes
+
+Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Translation and Interpretation, Osmaniye Korkut Ata University). Built with Quarto, hosted on GitHub Pages, custom domain fatihbozdag.com.
+
+## Conventions
+
+- Language of the site: English primary, Turkish page at `tr/index.qmd`. Keep both in sync when biography changes.
+- Commit messages: plain, imperative, no co-author or tool attribution lines. Never add `Co-Authored-By`, `Claude-Session` or "Generated with" trailers.
+- Do not run `quarto render` output into git: `_site/` and `.quarto/` are ignored; GitHub Actions renders.
+- Publications are hand-formatted APA in `publications.qmd` (one `::: {.pub}` block each) **and** mirrored in `pubs/bozdag.bib`. Update both.
+- Only upload PDFs the publisher allows (open-access journals, CC-licensed articles). Currently excluded on purpose: Lingua (Elsevier, © publisher), book chapters from IGI Global, Cambridge Scholars, Harrassowitz, Çizgi, Eğiten, IJOPEC, LIF. Author post-prints may be added later if rights allow.
+- PDF file names: `files/papers/<authors>-<year>-<venue>-<short-title>.pdf`.
+- Images: `images/`. Profile photo should replace `images/profile.svg` (placeholder) — then change the reference in `index.qmd`.
+
+## Stack
+
+- Quarto website (`_quarto.yml`), theme `cosmo` + `styles.scss` (Source Sans 3 / Source Serif 4 from Google Fonts).
+- Pages: `index.qmd` (About), `publications.qmd`, `tools.qmd`, `teaching.qmd`, `tr/index.qmd`.
+- Deployment: `.github/workflows/publish.yml` — on push to `main`: `quarto-dev/quarto-actions/setup` (Quarto 1.7.32) → `quarto render` → `actions/upload-pages-artifact` → `actions/deploy-pages`.
+- `CNAME` = `fatihbozdag.com`; `robots.txt` and `files/**`, `pubs/**` are copied as resources.
+- Local preview: install Quarto (https://quarto.org/docs/get-started/), then `quarto preview` in this folder.
+
+## Infrastructure state (as of 2026-10-29)
+
+- Domain: fatihbozdag.com, registered 28 Oct 2026 via GoDaddy, 3 years, expires 28 Oct 2029, auto-renew on. Consider transferring to Cloudflare Registrar after the 60-day lock for cheaper renewals.
+- DNS (GoDaddy, ns37/ns38.domaincontrol.com):
+  - A @ → 185.199.108.153 / 109.153 / 110.153 / 111.153
+  - CNAME www → fatihbozdag.github.io
+  - leave NS, SOA, `_dmarc` TXT as they are
+- GitHub repo: https://github.com/fatihbozdag/fatihbozdag.github.io (branch `main`).
+- GitHub Pages: **must be set to Source = "GitHub Actions"** (Settings → Pages → Build and deployment). On 29 Oct the repo was still in "Deploy from a branch" mode, so the Jekyll-rendered README was served instead of the Quarto build (`/publications.html` → 404). After switching, re-run the "Build and publish site" workflow (Actions tab → Run workflow) or push any commit.
+- HTTPS: GitHub issues the certificate automatically once DNS is verified; then tick "Enforce HTTPS" in Settings → Pages.
+- Check after deploy: `curl -I https://fatihbozdag.com/publications.html` should return 200; `https://www.fatihbozdag.com` should 301 to the apex.
+
+## Open to-dos
+
+1. Switch Pages source to GitHub Actions and verify the Quarto build is live (see above).
+2. Enforce HTTPS once the certificate exists.
+3. Replace placeholder profile image with a real photo (`images/profile.jpg`, ~400×400, <200 KB).
+4. Add the *Language and Cognition* article (DOI 10.1017/langcog.2026.10131) to `publications.qmd` and `pubs/bozdag.bib` when it appears online (Vol. 18, 2026, e-number; continuous publication).
+5. Add the Lotus Congress 2026 abstract-book details when published.
+6. Add the website URL to ORCID, Google Scholar, GitHub profile (`blog` field) and YÖK Akademik.
+7. Optional: author post-prints for Lingua and chapters if publisher policies allow (check Sherpa Romeo).
+8. Optional: a short "News" or "Talks" list; no blog unless it will be maintained.
+
+## People / identifiers
+
+- ORCID 0000-0002-9959-4704 · Google Scholar user W_xdrwwAAAAJ · GitHub fatihbozdag · e-mail fatihbozdag@osmaniye.edu.tr
+- Related repos listed on the Tools page: bitig, linguistic_clusters, metadiscourse_analysis, passive_detection, annotator, Grammar-Research-with-Spacy, lexical_complexity.
