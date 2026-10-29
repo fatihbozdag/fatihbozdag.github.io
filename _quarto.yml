@@ -1,0 +1,61 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - CNAME
+    - robots.txt
+    - files/**
+    - pubs/**
+
+website:
+  title: "Fatih Ünal Bozdağ"
+  description: "Corpus linguistics, Cognitive Linguistics and NLP — usage-based accounts of grammar in learner English."
+  site-url: https://fatihbozdag.com
+  repo-url: https://github.com/fatihbozdag/fatihbozdag.github.io
+  favicon: images/favicon.svg
+  open-graph: true
+  twitter-card: false
+  navbar:
+    background: light
+    pinned: true
+    left:
+      - text: "About"
+        href: index.qmd
+      - text: "Publications"
+        href: publications.qmd
+      - text: "Tools & Data"
+        href: tools.qmd
+      - text: "Teaching"
+        href: teaching.qmd
+      - text: "Türkçe"
+        href: tr/index.qmd
+    right:
+      - icon: github
+        href: https://github.com/fatihbozdag
+        aria-label: GitHub
+      - icon: envelope
+        href: mailto:fatihbozdag@osmaniye.edu.tr
+        aria-label: Email
+  page-footer:
+    left: "© 2026 Fatih Ünal Bozdağ · Osmaniye Korkut Ata University"
+    right:
+      - text: "ORCID"
+        href: https://orcid.org/0000-0002-9959-4704
+      - text: "Google Scholar"
+        href: https://scholar.google.com/citations?user=W_xdrwwAAAAJ
+      - text: "GitHub"
+        href: https://github.com/fatihbozdag
+      - text: "YÖK Akademik"
+        href: https://akademik.yok.gov.tr/AkademikArama/
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles.scss]
+    toc: false
+    page-layout: article
+    link-external-newwindow: true
+    lang: en
+    include-in-header:
+      - text: |
+          <meta name="author" content="Fatih Ünal Bozdağ">

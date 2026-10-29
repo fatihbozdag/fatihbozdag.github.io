@@ -1,0 +1,21 @@
+---
+title: "Fatih Ünal Bozdağ"
+subtitle: "Derlem dilbilimi · Bilişsel Dilbilim · Doğal dil işleme"
+lang: tr
+---
+
+Dr. Öğr. Üyesi, Osmaniye Korkut Ata Üniversitesi İnsan ve Toplum Bilimleri Fakültesi, İngilizce Mütercim ve Tercümanlık Bölümü.
+
+Derlem dilbilimi, Bilişsel Dilbilim ve doğal dil işlemenin kesişiminde çalışıyorum. Araştırmalarımın ana sorusu, İngilizce öğrenenlerin dilbilgisel bilgiyi kullanımdan nasıl inşa ettiği ve ana dillerinin bu süreci nasıl biçimlendirdiğidir. Bu soruya büyük öğrenici derlemleri (ICLE, EFCAMDAT, TICLE), yapı dilbilgisine dayalı betimlemeler ve olasılıksal/Bayesçi modellerle yaklaşıyorum.
+
+Üç ana çalışma alanı:
+
+- **Kullanım temelli öğrenici dilbilgisi.** Kiplik fiilleri, edilgen yapılar, datif yapılar, zaman–görünüş, kaçınma ve üstsöylem öğelerinde yapısal aktarım, kalıplaşma ve dağılımsal kararlılık.
+- **Bilişsel Dilbilgisi açısından Türkçe.** Görünüş ve sürerlilik, gömülü konum yapıları, Türk dillerinde hareket ve duruş fiillerinin gramatikleşmesi. *Turkish Aspect through Cognitive Grammar* (Artsürem, 2026) bu çizginin toplu ürünü.
+- **Derlem araştırması için araçlar.** Yapı tespiti, üstsöylem etiketleme, sözcüksel ve sözdizimsel karmaşıklık ölçümü ve hesaplamalı biçembilim ([bitig](https://github.com/fatihbozdag/bitig)) için Python boru hatları; kod ve veriler telif izin verdiği ölçüde açık.
+
+Bölümde söylem çözümlemesi, bilgisayar destekli çeviri, tıp ve hukuk çevirisi, yerelleştirme ve toplum çevirmenliği dersleri veriyorum.
+
+**Öğrenim:** Doktora, İngiliz Dili Eğitimi, Çukurova Üniversitesi (2019) · Yüksek lisans, aynı program (2014) · Lisans, İngilizce Öğretmenliği, Çukurova Üniversitesi (2011).
+
+[Yayınlar](../publications.qmd) · [Araçlar ve veri](../tools.qmd) · [Dersler](../teaching.qmd) · [ORCID](https://orcid.org/0000-0002-9959-4704) · [Google Scholar](https://scholar.google.com/citations?user=W_xdrwwAAAAJ) · [fatihbozdag@osmaniye.edu.tr](mailto:fatihbozdag@osmaniye.edu.tr)
