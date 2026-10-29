@@ -16,8 +16,11 @@ website:
   site-url: https://fatihbozdag.com
   repo-url: https://github.com/fatihbozdag/fatihbozdag.github.io
   favicon: images/favicon.svg
+  image: images/og-image.png
+  image-alt: "Fatih Ünal Bozdağ, Assistant Professor of English Translation and Interpretation, Osmaniye Korkut Ata University"
   open-graph: true
-  twitter-card: false
+  twitter-card:
+    card-style: summary_large_image
   navbar:
     background: light
     pinned: true
@@ -66,3 +69,6 @@ format:
     include-in-header:
       - text: |
           <meta name="author" content="Fatih Ünal Bozdağ">
+    include-before-body:
+      - text: |
+          <a class="skip-link" href="#quarto-document-content">Skip to content</a>

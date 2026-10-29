@@ -1,5 +1,6 @@
 ---
 pagetitle: "Fatih Ünal Bozdağ"
+image: images/og-image.png
 title-block-style: none
 description: "Assistant Professor at Osmaniye Korkut Ata University. Learner corpora, usage-based grammar, Cognitive Grammar and Bayesian modelling."
 ---
@@ -7,7 +8,10 @@ description: "Assistant Professor at Osmaniye Korkut Ata University. Learner cor
 ::: {.about-hero .column-page}
 # Fatih Ünal Bozdağ {.hero-name}
 
-[Assistant Professor of English Translation and Interpretation, Osmaniye Korkut Ata University]{.hero-role}
+::: {.hero-role}
+Assistant Professor of English Translation and Interpretation\
+Osmaniye Korkut Ata University
+:::
 
 [Learner corpora · Usage-based grammar · Cognitive Grammar · Bayesian modelling]{.hero-focus}
 :::

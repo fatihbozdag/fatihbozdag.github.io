@@ -1,0 +1,17 @@
+---
+title: "Page not found"
+pagetitle: "Page not found"
+image: images/og-image.png
+search: false
+---
+
+The page you were looking for is not on this site. It may have been moved or renamed, or the address may contain a typing error.
+
+You can continue from one of these pages:
+
+- [About](/index.html)
+- [Publications](/publications.html)
+- [Tools and data](/tools.html)
+- [Teaching](/teaching.html)
+
+[Aradığınız sayfa bulunamadı. [Türkçe ana sayfaya](/tr/index.html) dönebilirsiniz.]{lang="tr"}

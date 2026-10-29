@@ -1,5 +1,6 @@
 ---
 pagetitle: "Fatih Ünal Bozdağ"
+image: ../images/og-image.png
 lang: tr
 title-block-style: none
 description: "Dr. Öğr. Üyesi, Osmaniye Korkut Ata Üniversitesi. Öğrenici derlemleri, kullanım temelli dilbilgisi, Bilişsel Dilbilgisi ve Bayesçi modelleme."
@@ -8,7 +9,10 @@ description: "Dr. Öğr. Üyesi, Osmaniye Korkut Ata Üniversitesi. Öğrenici d
 ::: {.about-hero .column-page}
 # Fatih Ünal Bozdağ {.hero-name}
 
-[Dr. Öğr. Üyesi, İngilizce Mütercim ve Tercümanlık Bölümü, Osmaniye Korkut Ata Üniversitesi]{.hero-role}
+::: {.hero-role}
+Dr. Öğr. Üyesi, İngilizce Mütercim ve Tercümanlık Bölümü\
+Osmaniye Korkut Ata Üniversitesi
+:::
 
 [Öğrenici derlemleri · Kullanım temelli dilbilgisi · Bilişsel Dilbilgisi · Bayesçi modelleme]{.hero-focus}
 :::

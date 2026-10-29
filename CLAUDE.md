@@ -11,6 +11,7 @@ Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Tra
 - Only upload PDFs the publisher allows (open-access journals, CC-licensed articles). Lingua: only the accepted manuscript is posted (`files/papers/bozdag-mo-2026-lingua-cross-linguistic-influence-aam.pdf`, built 30 Oct 2026 from `ConstructionVerbs/second round/Revised manuscript R2 with figures and copyedits.docx` with R2 colouring removed and the CC BY-NC-ND notice added); never the publisher PDF. Currently excluded on purpose: book chapters from IGI Global, Cambridge Scholars, Harrassowitz, Çizgi, Eğiten, IJOPEC, LIF. Author post-prints may be added later if rights allow.
 - PDF file names: `files/papers/<authors>-<year>-<venue>-<short-title>.pdf`.
 - Images: `images/`. Profile photo should replace `images/profile.svg` (placeholder) — then change the reference in `index.qmd`.
+- Link-preview image `images/og-image.png` (1200×630) is drawn by `scripts/make_og_image.py`; regenerate it when the position or research areas change (fonts: Source Serif 4 and Source Sans 3 variable TTFs from github.com/google/fonts, passed by path, not stored here). `404.qmd` is the custom not-found page; GitHub Pages serves it for any missing address.
 
 ## Stack
 
