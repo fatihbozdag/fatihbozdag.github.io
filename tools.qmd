@@ -5,48 +5,66 @@ subtitle: "Open-source software and replication material"
 
 Code and data behind my studies are released on [GitHub](https://github.com/fatihbozdag) and the [Open Science Framework](https://osf.io/vz746/) where copyright allows. Everything below is Python unless stated otherwise.
 
-## Software
+## Main tools
 
-::: {.tool}
-### bitig — computational stylometry
+::: {.tool .featured}
+### bitig
+[Computational stylometry]{.kicker}
+
 Authorship attribution, author-group style comparison and forensic authorship analysis: Delta, Zeta, PCA/MDS, clustering, bootstrap consensus trees and classification (the core of R's *Stylo*), plus a spaCy pipeline, transformer embeddings, a Bayesian layer (PyMC) and likelihood-ratio–calibrated authorship verification. Supports EN, TR, DE, ES, FR. Named after the Old Turkic word for *inscription*.
 [Documentation](https://fatihbozdag.github.io/bitig/) · [GitHub](https://github.com/fatihbozdag/bitig) · [PyPI](https://pypi.org/project/bitig/)
 [BSD-3-Clause]{.meta}
 :::
 
-::: {.tool}
+::: {.tool .featured}
 ### Linguistic Clusters Framework
+[Distributional stability in learner constructions]{.kicker}
+
 Pipeline for identifying stable distributional patterns in learner English passives: instance-level association measures (transitional probability, ΔP, boundary entropy), schema acceptance via NPMI or slot entropy, and validation by permutation, sensitivity and ablation analysis. Replication material for the *Corpus Linguistics and Linguistic Theory* (2026) article.
 [GitHub](https://github.com/fatihbozdag/linguistic_clusters) · [OSF](https://osf.io/kq7gv/)
 :::
 
-::: {.tool}
-### Metalinguistics — metadiscourse analysis
+::: {.tool .featured}
+### Metalinguistics
+[Metadiscourse analysis]{.kicker}
+
 Detection and classification of metadiscourse markers in academic text (Hyland's eight categories) with a transformer-based spaCy pipeline and a feature-based classifier; distinguishes academic from conversational uses. Used in the *Journal of Language Research* (2025) study on Turkish EFL metadiscourse.
 [GitHub](https://github.com/fatihbozdag/metadiscourse_analysis)
 [MIT]{.meta}
 :::
 
+## Research code
+
+Smaller repositories that accompany individual studies.
+
 ::: {.tool}
-### PassivePy — passive voice detection
+### PassivePy
+[Passive voice detection]{.kicker}
+
 Passive construction detection and pattern analysis, with comparison of detection methods and visualisation.
 [GitHub](https://github.com/fatihbozdag/passive_detection)
 :::
 
 ::: {.tool}
 ### Tense annotation tool
+[Learner-text annotation]{.kicker}
+
 Web application for annotating English tense–aspect structures in learner texts by CEFR level: role-based access, categorised tense options with instructions, auto-save, progress tracking and CSV export.
 [GitHub](https://github.com/fatihbozdag/annotator)
 :::
 
 ::: {.tool}
 ### Grammar research with spaCy
-Collection of reproducible pipelines for grammar analysis in learner English, each module tied to a published study — among them the dative-alternation analysis behind the *TAPSLA* (2024) article.
+[Study pipelines]{.kicker}
+
+Collection of reproducible pipelines for grammar analysis in learner English, each module tied to a published study, among them the dative-alternation analysis behind the *TAPSLA* (2024) article.
 [GitHub](https://github.com/fatihbozdag/Grammar-Research-with-Spacy)
 :::
 
 ::: {.tool}
 ### Lexical complexity across CEFR levels
+[Replication code]{.kicker}
+
 Code base for Bozdağ & Kilimci (2024), *Lexical complexity and language proficiency: An investigation of indices across CEFR levels*.
 [GitHub](https://github.com/fatihbozdag/lexical_complexity)
 :::

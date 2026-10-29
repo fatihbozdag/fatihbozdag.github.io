@@ -12,7 +12,7 @@ project:
 
 website:
   title: "Fatih Ünal Bozdağ"
-  description: "Corpus linguistics, Cognitive Linguistics and NLP — usage-based accounts of grammar in learner English."
+  description: "Corpus linguistics, Cognitive Linguistics and NLP: usage-based accounts of grammar in learner English."
   site-url: https://fatihbozdag.com
   repo-url: https://github.com/fatihbozdag/fatihbozdag.github.io
   favicon: images/favicon.svg
@@ -57,6 +57,8 @@ format:
   html:
     theme:
       light: [cosmo, styles.scss]
+      dark: [cosmo, styles-dark.scss, styles.scss]
+    respect-user-color-scheme: true
     toc: false
     page-layout: article
     link-external-newwindow: true

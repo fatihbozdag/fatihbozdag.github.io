@@ -1,54 +1,95 @@
 /*-- scss:defaults --*/
-$font-family-sans-serif: "Source Sans 3", "Source Sans Pro", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$font-family-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-$headings-font-family: $font-family-serif;
-$font-size-base: 1.05rem;
-$line-height-base: 1.6;
-$primary: #1f3a5f;
-$link-color: #1f3a5f;
-$link-hover-color: #0b2545;
-$body-color: #1d1d1f;
-$navbar-bg: #ffffff;
-$navbar-fg: #1d1d1f;
-$footer-bg: #f5f5f4;
-$border-radius: 0.25rem;
+// Every colour is a !default so that styles-dark.scss can override it.
+$font-family-sans-serif: "Source Sans 3", "Source Sans Pro", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: "Source Serif 4", Georgia, "Times New Roman", serif !default;
+$headings-font-family: $font-family-serif !default;
+$font-size-base: 1.05rem !default;
+$line-height-base: 1.6 !default;
+$primary: #1f3a5f !default;
+$link-color: $primary !default;
+$link-hover-color: #0b2545 !default;
+$body-bg: #ffffff !default;
+$body-color: #1d1d1f !default;
+$navbar-bg: $body-bg !default;
+$navbar-fg: $body-color !default;
+$footer-bg: #f5f5f4 !default;
+$border-radius: 0.25rem !default;
+
+// site palette
+$site-accent: $primary !default;
+$site-muted: #5b6270 !default;
+$site-rule: #e5e5e3 !default;
+$site-chip-border: #c9d2df !default;
+$site-chip-hover: #eef2f7 !default;
+$site-card-bg: #ffffff !default;
+$site-feature-bg: #f7f9fc !default;
 
 /*-- scss:rules --*/
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap');
 
-.navbar { border-bottom: 1px solid #e5e5e3; }
+.navbar { border-bottom: 1px solid $site-rule; }
 .navbar-brand { font-family: $font-family-serif; font-weight: 600; letter-spacing: 0.01em; }
+// keep the full name visible next to the menu and search buttons on phones
+@media (max-width: 420px) {
+  .navbar-brand .navbar-title { font-size: 1rem; }
+  .navbar-brand { margin-right: 0.25rem; }
+}
 
-h1, h2, h3 { color: $primary; }
+h1, h2, h3 { color: $site-accent; }
 h1.title { font-size: 2.1rem; margin-bottom: 0.25rem; }
-h2 { font-size: 1.45rem; margin-top: 2.2rem; border-bottom: 1px solid #e5e5e3; padding-bottom: 0.3rem; }
+h2 { font-size: 1.45rem; margin-top: 2.2rem; border-bottom: 1px solid $site-rule; padding-bottom: 0.3rem; }
 h3 { font-size: 1.15rem; margin-top: 1.6rem; }
 
-.subtitle { color: #555; font-size: 1.1rem; }
+.subtitle { color: $site-muted; font-size: 1.1rem; }
+
+// long unbroken strings (URLs, e-mail) may wrap rather than widen the page
+main a { overflow-wrap: anywhere; }
 
 /* publication entries */
 .pub { margin: 0 0 1.1rem 0; padding-left: 1.6rem; text-indent: -1.6rem; }
 .pub .links { margin-left: 0.3rem; }
-.pub .links a { display: inline-block; text-indent: 0; white-space: nowrap; font-size: 0.82rem; line-height: 1.4; border: 1px solid #c9d2df; border-radius: 0.25rem; padding: 0.05rem 0.45rem; margin: 0.1rem 0.3rem 0.1rem 0; text-decoration: none; color: $primary; }
-.pub .links a:hover { background: #eef2f7; }
-.pub .tag { font-size: 0.78rem; color: #6b7280; margin-left: 0.1rem; white-space: nowrap; }
+.pub .links a { display: inline-block; text-indent: 0; white-space: nowrap; overflow-wrap: normal; font-size: 0.82rem; line-height: 1.4; border: 1px solid $site-chip-border; border-radius: 0.25rem; padding: 0.05rem 0.45rem; margin: 0.1rem 0.3rem 0.1rem 0; text-decoration: none; color: $site-accent; }
+.pub .links a:hover { background: $site-chip-hover; }
+.pub .tag { font-size: 0.78rem; color: $site-muted; margin-left: 0.1rem; white-space: nowrap; }
 .pub .me { font-weight: 600; }
 
-/* long unbroken strings (URLs, e-mail) may wrap rather than widen the page */
-main a { overflow-wrap: anywhere; }
-.pub .links a { overflow-wrap: normal; }
+// year landmarks inside publication sections
+h3.pub-year, .pub-year h3, h3.anchored.pub-year {
+  font-family: $font-family-sans-serif; font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: $site-muted;
+  margin: 1.6rem 0 0.6rem 0;
+}
 
 /* about page */
-.about-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: start; }
-@media (min-width: 768px) { .about-grid { grid-template-columns: 200px 1fr; } }
-.about-grid img { width: 100%; border-radius: 0.4rem; }
-.about-meta { font-size: 0.95rem; color: #444; }
-.about-meta a { margin-right: 0.8rem; }
+.about-hero { margin: 1.2rem 0 1.8rem 0; padding-bottom: 1.2rem; border-bottom: 1px solid $site-rule; }
+.about-hero h1.hero-name, .about-hero .hero-name { font-size: 2.4rem; font-weight: 600; margin: 0 0 0.35rem 0; border: 0; }
+.about-hero .hero-role { display: block; font-size: 1.15rem; color: $body-color; }
+.about-hero .hero-focus { display: block; margin-top: 0.3rem; font-size: 1rem; color: $site-muted; letter-spacing: 0.01em; }
+.about-hero p { margin: 0; }
+@media (max-width: 575px) {
+  .about-hero h1.hero-name, .about-hero .hero-name { font-size: 1.9rem; }
+  .about-hero .hero-role { font-size: 1.05rem; }
+  .about-grid img { max-width: 160px; }
+}
+
+.about-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem 2.5rem; align-items: start; }
+@media (min-width: 768px) { .about-grid { grid-template-columns: 220px minmax(0, 1fr); } }
+.about-grid > div { min-width: 0; }
+.about-grid img { width: 100%; max-width: 220px; border-radius: 0.4rem; }
+.about-meta { font-size: 0.95rem; color: $site-muted; line-height: 1.5; }
+.about-meta ul { list-style: none; padding: 0; margin: 0.9rem 0 0 0; }
+.about-meta li { margin: 0.2rem 0; }
+.about-grid h2:first-child { margin-top: 0; }
 
 /* tool cards */
-.tool { border: 1px solid #e5e5e3; border-radius: 0.4rem; padding: 0.9rem 1.1rem; margin-bottom: 1rem; }
-.tool h3 { margin-top: 0; font-size: 1.1rem; }
-.tool .meta { font-size: 0.85rem; color: #6b7280; }
+.tool { background: $site-card-bg; border: 1px solid $site-rule; border-radius: 0.4rem; padding: 0.9rem 1.1rem; margin-bottom: 1rem; }
+.tool h3 { margin: 0; font-size: 1.1rem; }
+.tool .kicker { display: block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: $site-muted; margin: 0.1rem 0 0.4rem 0; }
+.tool p { margin-bottom: 0.4rem; }
+.tool .meta { font-size: 0.85rem; color: $site-muted; }
+.tool.featured { background: $site-feature-bg; border-left: 4px solid $site-accent; padding: 1.1rem 1.3rem; }
+.tool.featured h3 { font-size: 1.3rem; }
 
-.footer { font-size: 0.9rem; }
+/* footer */
+.nav-footer { font-size: 0.95rem; }
 .nav-footer a { margin-left: 1rem; }

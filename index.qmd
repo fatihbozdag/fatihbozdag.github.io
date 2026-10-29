@@ -1,21 +1,32 @@
 ---
-title: "Fatih Ünal Bozdağ"
-subtitle: "Corpus linguistics · Cognitive Linguistics · NLP"
-title-block-banner: false
+pagetitle: "Fatih Ünal Bozdağ"
+title-block-style: none
+description: "Assistant Professor at Osmaniye Korkut Ata University. Learner corpora, usage-based grammar, Cognitive Grammar and Bayesian modelling."
 ---
 
-::: {.about-grid}
+::: {.about-hero .column-page}
+# Fatih Ünal Bozdağ {.hero-name}
+
+[Assistant Professor of English Translation and Interpretation, Osmaniye Korkut Ata University]{.hero-role}
+
+[Learner corpora · Usage-based grammar · Cognitive Grammar · Bayesian modelling]{.hero-focus}
+:::
+
+::: {.about-grid .column-page}
 ::: {}
 ![](images/profile.svg){.profile fig-alt="Fatih Ünal Bozdağ"}
 
 ::: {.about-meta}
-Assistant Professor (Dr. Öğr. Üyesi)\
+Dr. Öğr. Üyesi\
 Department of English Translation and Interpretation\
 Faculty of Humanities and Social Sciences\
 Osmaniye Korkut Ata University, Türkiye
 
-[ORCID](https://orcid.org/0000-0002-9959-4704) · [Google Scholar](https://scholar.google.com/citations?user=W_xdrwwAAAAJ) · [GitHub](https://github.com/fatihbozdag) · [OSF](https://osf.io/vz746/)\
-[fatihbozdag@osmaniye.edu.tr](mailto:fatihbozdag@osmaniye.edu.tr)
+- [fatihbozdag@osmaniye.edu.tr](mailto:fatihbozdag@osmaniye.edu.tr)
+- [ORCID](https://orcid.org/0000-0002-9959-4704)
+- [Google Scholar](https://scholar.google.com/citations?user=W_xdrwwAAAAJ)
+- [GitHub](https://github.com/fatihbozdag)
+- [OSF](https://osf.io/vz746/)
 :::
 :::
 
@@ -24,7 +35,7 @@ I am a linguist working at the intersection of corpus linguistics, Cognitive Lin
 
 Three threads run through my research:
 
-- **Usage-based accounts of learner grammar.** Constructional transfer, formulaicity and distributional stability in L2 English — modal verbs, passives, dative constructions, tense–aspect, hedging and metadiscourse — studied with corpus data (ICLE, EFCAMDAT, TICLE) and multilevel or Bayesian models.
+- **Usage-based accounts of learner grammar.** Constructional transfer, formulaicity and distributional stability in L2 English (modal verbs, passives, dative constructions, tense–aspect, hedging and metadiscourse), studied with corpus data (ICLE, EFCAMDAT, TICLE) and multilevel or Bayesian models.
 - **Turkish from a Cognitive Grammar perspective.** Aspect and progressivity, embedded locative constructions, and grammaticalisation of motion and posture verbs across Turkic languages. My book [*Turkish Aspect through Cognitive Grammar*](https://artsurem.tr/index.php/books/tr/catalog/book/15) (Artsürem, 2026) brings this line together.
 - **Tools for corpus research.** Reproducible Python pipelines for construction detection, metadiscourse annotation, lexical and syntactic complexity, and computational stylometry ([bitig](https://github.com/fatihbozdag/bitig)). Code and data for my studies are released where copyright allows.
 
@@ -38,11 +49,25 @@ I teach discourse analysis, translation technology (CAT tools), medical and lega
 
 ## Selected recent work
 
-- Bozdağ, F. Ü. (in press). Native and learner verb preferences as predictors of passive use in L2 English writing. *Language and Cognition*. [doi](https://doi.org/10.1017/langcog.2026.10131) · [data](https://osf.io/zt9md/)
-- Bozdağ, F. Ü. (2026). Modeling distributional stability in learner English passives: The Linguistic Clusters Framework. *Corpus Linguistics and Linguistic Theory*, 23(3). [doi](https://doi.org/10.1515/cllt-2025-0141) · [pdf](files/papers/bozdag-2026-cllt-linguistic-clusters.pdf) · [code](https://github.com/fatihbozdag/linguistic_clusters) · [data](https://osf.io/kq7gv/)
-- Bozdağ, F. Ü., & Mo, J. (2026). Cross-linguistic influence in upper-intermediate to advanced L2 construction learning. *Lingua*, 341, 104239. [doi](https://doi.org/10.1016/j.lingua.2026.104239)
-- Bozdağ, F. Ü., Morris, G., & Mo, J. (2025). A corpus-based analysis of noun modifiers in L2 writing: The respective impact of L2 proficiency and L1 background. *PLOS ONE*, 20(3), e0320092. [doi](https://doi.org/10.1371/journal.pone.0320092) · [pdf](files/papers/bozdag-morris-mo-2025-plosone-noun-modifiers.pdf)
-- Bozdağ, F. Ü., Morris, G., & Mo, J. (2024). A Bayesian probabilistic analysis of the use of English modal verbs in L2 writing. *Heliyon*, 10(7), e28701. [doi](https://doi.org/10.1016/j.heliyon.2024.e28701) · [pdf](files/papers/bozdag-morris-mo-2024-heliyon-modal-verbs.pdf)
+::: {.pub}
+[Bozdağ, F. Ü.]{.me} (in press). Native and learner verb preferences as predictors of passive use in L2 English writing. *Language and Cognition*. [[doi](https://doi.org/10.1017/langcog.2026.10131) [data](https://osf.io/zt9md/)]{.links} [SSCI · in press]{.tag}
+:::
+
+::: {.pub}
+[Bozdağ, F. Ü.]{.me} (2026). Modeling distributional stability in learner English passives: The Linguistic Clusters Framework. *Corpus Linguistics and Linguistic Theory*, *23*(3). [[doi](https://doi.org/10.1515/cllt-2025-0141) [pdf](files/papers/bozdag-2026-cllt-linguistic-clusters.pdf) [code](https://github.com/fatihbozdag/linguistic_clusters) [data](https://osf.io/kq7gv/)]{.links} [SSCI · open access]{.tag}
+:::
+
+::: {.pub}
+[Bozdağ, F. Ü.]{.me}, & Mo, J. (2026). Cross-linguistic influence in upper-intermediate to advanced L2 construction learning: A multidimensional analysis of L1 effects on probability, frequency, diversity, and verb-construction associations. *Lingua*, *341*, 104239. [[doi](https://doi.org/10.1016/j.lingua.2026.104239) [data](https://osf.io/bg39s/)]{.links} [SSCI]{.tag}
+:::
+
+::: {.pub}
+[Bozdağ, F. Ü.]{.me}, Morris, G., & Mo, J. (2025). A corpus-based analysis of noun modifiers in L2 writing: The respective impact of L2 proficiency and L1 background. *PLOS ONE*, *20*(3), e0320092. [[doi](https://doi.org/10.1371/journal.pone.0320092) [pdf](files/papers/bozdag-morris-mo-2025-plosone-noun-modifiers.pdf)]{.links} [SCIE · open access]{.tag}
+:::
+
+::: {.pub}
+[Bozdağ, F. Ü.]{.me}, Morris, G., & Mo, J. (2024). A Bayesian probabilistic analysis of the use of English modal verbs in L2 writing: Focusing on L1 influence and topic effects. *Heliyon*, *10*(7), e28701. [[doi](https://doi.org/10.1016/j.heliyon.2024.e28701) [pdf](files/papers/bozdag-morris-mo-2024-heliyon-modal-verbs.pdf)]{.links} [SCIE · open access]{.tag}
+:::
 
 Full list: [Publications](publications.qmd).
 :::

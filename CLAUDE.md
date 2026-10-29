@@ -14,7 +14,7 @@ Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Tra
 
 ## Stack
 
-- Quarto website (`_quarto.yml`), theme `cosmo` + `styles.scss` (Source Sans 3 / Source Serif 4 from Google Fonts).
+- Quarto website (`_quarto.yml`), theme `cosmo` + `styles.scss` (Source Sans 3 / Source Serif 4 from Google Fonts). Dark mode: `styles-dark.scss` overrides the colour variables, which `styles.scss` declares as `!default`; keep new colours as variables in both files. Only the `.qmd` pages are rendered (`project.render`).
 - Pages: `index.qmd` (About), `publications.qmd`, `tools.qmd`, `teaching.qmd`, `tr/index.qmd`.
 - Deployment: `.github/workflows/publish.yml` — on push to `main`: `quarto-dev/quarto-actions/setup` (Quarto 1.7.32) → `quarto render` → `actions/upload-pages-artifact` → `actions/deploy-pages`.
 - `CNAME` = `fatihbozdag.com`; `robots.txt` and `files/**`, `pubs/**` are copied as resources.

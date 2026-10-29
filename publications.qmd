@@ -7,9 +7,13 @@ Author's accepted or published versions are linked where the publisher permits. 
 
 ## Journal articles
 
+### In press {.pub-year}
+
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me} (in press). Native and learner verb preferences as predictors of passive use in L2 English writing. *Language and Cognition*. [[doi](https://doi.org/10.1017/langcog.2026.10131) [data](https://osf.io/zt9md/)]{.links} [SSCI · in press]{.tag}
 :::
+
+### 2026 {.pub-year}
 
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me} (2026). Modeling distributional stability in learner English passives: The Linguistic Clusters Framework. *Corpus Linguistics and Linguistic Theory*, *23*(3). [[doi](https://doi.org/10.1515/cllt-2025-0141) [pdf](files/papers/bozdag-2026-cllt-linguistic-clusters.pdf) [code](https://github.com/fatihbozdag/linguistic_clusters) [data](https://osf.io/kq7gv/)]{.links} [SSCI · open access]{.tag}
@@ -26,6 +30,8 @@ Author's accepted or published versions are linked where the publisher permits. 
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me} (2026). Türk dillerinde sürerlilik görünüşü: Bilişsel dilbilim perspektifinden hareket ve duruş fiillerinin gramatikleşme süreçleri [Progressive aspect in Turkic languages: Grammaticalisation of motion and posture verbs from a Cognitive Linguistics perspective]. *Tarih Okulu Dergisi*, *19*(83), 4301–4342. [[doi](https://doi.org/10.29228/joh.88758) [pdf](files/papers/bozdag-2026-tarih-okulu-surerlilik-gorunusu.pdf)]{.links} [TR Dizin]{.tag}
 :::
+
+### 2025 {.pub-year}
 
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me}, Morris, G., & Mo, J. (2025). A corpus-based analysis of noun modifiers in L2 writing: The respective impact of L2 proficiency and L1 background. *PLOS ONE*, *20*(3), e0320092. [[doi](https://doi.org/10.1371/journal.pone.0320092) [pdf](files/papers/bozdag-morris-mo-2025-plosone-noun-modifiers.pdf)]{.links} [SCIE · open access]{.tag}
@@ -47,6 +53,8 @@ Author's accepted or published versions are linked where the publisher permits. 
 [Bozdağ, F. Ü.]{.me} (2025). Will or be going to? Uncovering formulaic patterns of future marking in L2 academic English. *Dil Eğitimi ve Araştırmaları Dergisi*, *11*(1), 284–304. [[doi](https://doi.org/10.31464/jlere.1631941) [pdf](files/papers/bozdag-2025-jlere-will-be-going-to.pdf)]{.links} [TR Dizin]{.tag}
 :::
 
+### 2024 {.pub-year}
+
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me}, Morris, G., & Mo, J. (2024). A Bayesian probabilistic analysis of the use of English modal verbs in L2 writing: Focusing on L1 influence and topic effects. *Heliyon*, *10*(7), e28701. [[doi](https://doi.org/10.1016/j.heliyon.2024.e28701) [pdf](files/papers/bozdag-morris-mo-2024-heliyon-modal-verbs.pdf)]{.links} [SCIE · open access]{.tag}
 :::
@@ -55,9 +63,13 @@ Author's accepted or published versions are linked where the publisher permits. 
 [Bozdağ, F. Ü.]{.me} (2024). Probabilistic analysis of English dative constructions in academic writings of English EFL learners. *Theory and Practice of Second Language Acquisition*, *10*(1), 1–24. [[doi](https://doi.org/10.31261/TAPSLA.13902) [pdf](files/papers/bozdag-2024-tapsla-dative-constructions.pdf) [code](https://github.com/fatihbozdag/Grammar-Research-with-Spacy)]{.links} [Scopus · open access]{.tag}
 :::
 
+### 2020 {.pub-year}
+
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me}, & Sofu, H. (2020). Verbs and their patterns in academic writings of Turkish learners of English as a second language. *International Journal of Language Academy*, *8*(1), 85–96. [[doi](https://doi.org/10.29228/ijla.41461) [pdf](files/papers/bozdag-sofu-2020-ijla-verbs-and-patterns.pdf)]{.links}
 :::
+
+### 2017 {.pub-year}
 
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me}, & Badem, N. (2017). A comparison of communication verbs used by Turkish EFL learners and English native speakers: A corpus based study. *Gaziantep University Journal of Social Sciences*, *16*(3), 879–891. [[doi](https://doi.org/10.21547/jss.315063) [pdf](files/papers/bozdag-badem-2017-gaziantep-communication-verbs.pdf)]{.links} [TR Dizin]{.tag}
@@ -71,17 +83,25 @@ Author's accepted or published versions are linked where the publisher permits. 
 
 ## Book chapters
 
+### 2025 {.pub-year}
+
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me} (2025). Cognitive patterns in learner texts: Exploring semantic and semiotic dimensions through topic modeling. In H. Cangır, K. Uzun, T. Can, & E. Oğuz (Eds.), *Exploration of the intersection of corpus linguistics and language science*. IGI Global. ISBN 979-8-3693-8146-5.
 :::
+
+### 2024 {.pub-year}
 
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me}, & Kilimci, A. (2024). Lexical complexity and language proficiency: An investigation of indices across CEFR levels. In İ. H. Mirici & H. Ergül (Eds.), *Current academic reflections on English language teaching in an EFL setting*. Cambridge Scholars Publishing. ISBN 978-1-0364-1410-8. [[code](https://github.com/fatihbozdag/lexical_complexity)]{.links}
 :::
 
+### 2023 {.pub-year}
+
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me} (2023). Cognitive linguistics and language teaching: A comprehensive review. In T. Balcı, A. O. Öztürk, & M. Aksöz (Eds.), *Schriften zur Sprache und Literatur VII*. Çizgi Kitabevi. ISBN 978-625-396-051-3.
 :::
+
+### 2022 {.pub-year}
 
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me} (2022). Corpus linguistics in language teaching and learning. In M. Sağlam (Ed.), *New approaches in ELT*. Eğiten Kitap. ISBN 978-625-8420-02-9.
@@ -91,6 +111,8 @@ Author's accepted or published versions are linked where the publisher permits. 
 [Bozdağ, F. Ü.]{.me} (2022). Embodied learning and pedagogical reflections in second language teaching. In M. Sağlam (Ed.), *New approaches in ELT*. Eğiten Kitap. ISBN 978-625-8420-02-9.
 :::
 
+### 2020 {.pub-year}
+
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me} (2020). English tense–aspect structures and semantic classes of verbs in learner language. In T. Balcı, A. O. Öztürk, & M. Aksöz (Eds.), *Schriften zur Sprache und Literatur IV*. IJOPEC Publication. ISBN 978-1-912503-79-7.
 :::
@@ -99,11 +121,15 @@ Author's accepted or published versions are linked where the publisher permits. 
 [Bozdağ, F. Ü.]{.me}, & Sofu, H. (2020). Narrative skills in child language: A case study of Turkish-speaking fraternal twins. In H. Sofu, C. Can, A. Kilimci, A. D. Abik, & M. Yüceol Özezen (Eds.), *Turkish linguistics across boundaries: The Adana meeting* (Turcologica 121). Harrassowitz. ISBN 978-3-447-11408-0.
 :::
 
+### 2019 {.pub-year}
+
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me} (2019). The use of vertical prepositions in argumentative essays of Turkish EFL learners. In C. Can, P. Patsala, & Z. Tatsioka (Eds.), *Language in Focus: Contemporary means and methods in ELT and applied linguistics*. LIF. ISBN 978-9949-88-762-0.
 :::
 
 ## Conference papers
+
+### 2026 {.pub-year}
 
 ::: {.pub}
 Erdağ, A., & [Bozdağ, F. Ü.]{.me} (2026, October 7–9). *Who translates whom? Language, culture and identity in Nina Raine's* Tribes. 6th International Congress of Language and Translation Studies (Lotus Congress 2026), Selçuk University.
@@ -117,6 +143,8 @@ Erdağ, A., & [Bozdağ, F. Ü.]{.me} (2026, October 7–9). *Who translates whom
 [Bozdağ, F. Ü.]{.me} (2026, March). *From errors to patterns: Critically rethinking L2 writing assessment in the age of large language models*. International Congress on Global Practice of Multidisciplinary Scientific Studies XII.
 :::
 
+### 2023 {.pub-year}
+
 ::: {.pub}
 Kilimci, A., & [Bozdağ, F. Ü.]{.me} (2023, September). *Syntactic complexity in second language acquisition: A machine learning approach to measurement indices and their relationship with proficiency levels* [Full paper]. GlobELT 2023: 9th International Conference on Teaching English as an Additional Language.
 :::
@@ -124,6 +152,8 @@ Kilimci, A., & [Bozdağ, F. Ü.]{.me} (2023, September). *Syntactic complexity i
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me}, & Kilimci, A. (2023, September). *Lexical complexity and language proficiency: An investigation of indices across CEFR levels* [Full paper]. GlobELT 2023: 9th International Conference on Teaching English as an Additional Language.
 :::
+
+### 2017 {.pub-year}
 
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me}, & Can, C. (2017). *Computer-aided error analysis of the use of present simple tense by Turkish EFL learners*. ICONFLE 2017: International Conference on Foreign Language and Education.
@@ -141,9 +171,13 @@ Kilimci, A., & [Bozdağ, F. Ü.]{.me} (2023, September). *Syntactic complexity i
 Sofu, H., & [Bozdağ, F. Ü.]{.me} (2017). *Narrative skills in child language: A case study of Turkish-speaking fraternal twins*. 18th International Conference on Turkish Linguistics (ICTL), Adana.
 :::
 
+### 2016 {.pub-year}
+
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me} (2016). *The case of English preposition* to *in learner corpus: Insights from Cognitive Grammar to foreign language teaching*. Language in Focus: From Theory to Practice — New Directions in ELT and Applied Linguistics.
 :::
+
+### 2015 {.pub-year}
 
 ::: {.pub}
 Babanoğlu, M. P., Badem, N., & [Bozdağ, F. Ü.]{.me} (2015). *Written corrective feedback types on L2 writing by Turkish adult EFL learners*. IATEFL TTEd SIG.
