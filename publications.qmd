@@ -20,7 +20,7 @@ Author's accepted or published versions are linked where the publisher permits. 
 :::
 
 ::: {.pub}
-[Bozdağ, F. Ü.]{.me}, & Mo, J. (2026). Cross-linguistic influence in upper-intermediate to advanced L2 construction learning: A multidimensional analysis of L1 effects on probability, frequency, diversity, and verb-construction associations. *Lingua*, *341*, 104239. [[doi](https://doi.org/10.1016/j.lingua.2026.104239) [data](https://osf.io/bg39s/)]{.links} [SSCI]{.tag}
+[Bozdağ, F. Ü.]{.me}, & Mo, J. (2026). Cross-linguistic influence in upper-intermediate to advanced L2 construction learning: A multidimensional analysis of L1 effects on probability, frequency, diversity, and verb-construction associations. *Lingua*, *341*, 104239. [[doi](https://doi.org/10.1016/j.lingua.2026.104239) [accepted ms](files/papers/bozdag-mo-2026-lingua-cross-linguistic-influence-aam.pdf) [data](https://osf.io/bg39s/)]{.links} [SSCI]{.tag}
 :::
 
 ::: {.pub}

@@ -8,7 +8,7 @@ Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Tra
 - Commit messages: plain, imperative, no co-author or tool attribution lines. Never add `Co-Authored-By`, `Claude-Session` or "Generated with" trailers.
 - Do not run `quarto render` output into git: `_site/` and `.quarto/` are ignored; GitHub Actions renders.
 - Publications are hand-formatted APA in `publications.qmd` (one `::: {.pub}` block each) **and** mirrored in `pubs/bozdag.bib`. Update both.
-- Only upload PDFs the publisher allows (open-access journals, CC-licensed articles). Currently excluded on purpose: Lingua (Elsevier, © publisher), book chapters from IGI Global, Cambridge Scholars, Harrassowitz, Çizgi, Eğiten, IJOPEC, LIF. Author post-prints may be added later if rights allow.
+- Only upload PDFs the publisher allows (open-access journals, CC-licensed articles). Lingua: only the accepted manuscript is posted (`files/papers/bozdag-mo-2026-lingua-cross-linguistic-influence-aam.pdf`, built 30 Oct 2026 from `ConstructionVerbs/second round/Revised manuscript R2 with figures and copyedits.docx` with R2 colouring removed and the CC BY-NC-ND notice added); never the publisher PDF. Currently excluded on purpose: book chapters from IGI Global, Cambridge Scholars, Harrassowitz, Çizgi, Eğiten, IJOPEC, LIF. Author post-prints may be added later if rights allow.
 - PDF file names: `files/papers/<authors>-<year>-<venue>-<short-title>.pdf`.
 - Images: `images/`. Profile photo should replace `images/profile.svg` (placeholder) — then change the reference in `index.qmd`.
 
@@ -38,7 +38,7 @@ Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Tra
 2. *Language and Cognition* article (DOI 10.1017/langcog.2026.10131) is listed as "in press" since 29 Oct 2026. When it appears online, replace "in press" with 2026, add the volume (18) and e-number in `publications.qmd`, `index.qmd` and `pubs/bozdag.bib`.
 3. Add the Lotus Congress 2026 abstract-book details when published.
 4. Add the website URL to ORCID, Google Scholar, GitHub profile (`blog` field) and YÖK Akademik. Must be done by hand: the `gh` token lacks the `user` scope and the browser is not signed in to these services.
-5. Optional: author post-prints. Lingua: Elsevier allows the accepted manuscript on a personal website immediately, with a CC BY-NC-ND notice and a link to the DOI (checked 29 Oct 2026); needs the author's accepted-manuscript file. Chapters: check each publisher.
+5. Optional: author post-prints for book chapters, if each publisher allows (Lingua accepted manuscript posted 30 Oct 2026).
 6. Optional: a short "News" or "Talks" list; no blog unless it will be maintained.
 
 ## People / identifiers
