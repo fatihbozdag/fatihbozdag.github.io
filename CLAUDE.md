@@ -28,20 +28,18 @@ Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Tra
   - CNAME www → fatihbozdag.github.io
   - leave NS, SOA, `_dmarc` TXT as they are
 - GitHub repo: https://github.com/fatihbozdag/fatihbozdag.github.io (branch `main`).
-- GitHub Pages: **must be set to Source = "GitHub Actions"** (Settings → Pages → Build and deployment). On 29 Oct the repo was still in "Deploy from a branch" mode, so the Jekyll-rendered README was served instead of the Quarto build (`/publications.html` → 404). After switching, re-run the "Build and publish site" workflow (Actions tab → Run workflow) or push any commit.
-- HTTPS: GitHub issues the certificate automatically once DNS is verified; then tick "Enforce HTTPS" in Settings → Pages.
-- Check after deploy: `curl -I https://fatihbozdag.com/publications.html` should return 200; `https://www.fatihbozdag.com` should 301 to the apex.
+- GitHub Pages: Source = "GitHub Actions" (switched 29 Oct 2026). Before the switch the Jekyll-rendered README was served instead of the Quarto build. The Quarto build (generator quarto-1.7.32) has been live since 29 Oct.
+- HTTPS: Let's Encrypt certificate issued 29 Oct 2026 (valid to 27 Jan 2027, renewed automatically by GitHub). HTTPS is enforced: http:// returns 301 to https://.
+- Health check: `curl -I https://fatihbozdag.com/publications.html` returns 200 and `https://www.fatihbozdag.com` returns 301 to the apex (both verified 29 Oct 2026).
 
 ## Open to-dos
 
-1. Switch Pages source to GitHub Actions and verify the Quarto build is live (see above).
-2. Enforce HTTPS once the certificate exists.
-3. Replace placeholder profile image with a real photo (`images/profile.jpg`, ~400×400, <200 KB).
-4. Add the *Language and Cognition* article (DOI 10.1017/langcog.2026.10131) to `publications.qmd` and `pubs/bozdag.bib` when it appears online (Vol. 18, 2026, e-number; continuous publication).
-5. Add the Lotus Congress 2026 abstract-book details when published.
-6. Add the website URL to ORCID, Google Scholar, GitHub profile (`blog` field) and YÖK Akademik.
-7. Optional: author post-prints for Lingua and chapters if publisher policies allow (check Sherpa Romeo).
-8. Optional: a short "News" or "Talks" list; no blog unless it will be maintained.
+1. Replace placeholder profile image with a real photo (`images/profile.jpg`, ~400×400, <200 KB).
+2. Add the *Language and Cognition* article (DOI 10.1017/langcog.2026.10131) to `publications.qmd` and `pubs/bozdag.bib` when it appears online (Vol. 18, 2026, e-number; continuous publication).
+3. Add the Lotus Congress 2026 abstract-book details when published.
+4. Add the website URL to ORCID, Google Scholar, GitHub profile (`blog` field) and YÖK Akademik.
+5. Optional: author post-prints for Lingua and chapters if publisher policies allow (check Sherpa Romeo).
+6. Optional: a short "News" or "Talks" list; no blog unless it will be maintained.
 
 ## People / identifiers
 

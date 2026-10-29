@@ -14,7 +14,7 @@ Department of English Translation and Interpretation\
 Faculty of Humanities and Social Sciences\
 Osmaniye Korkut Ata University, Türkiye
 
-[ORCID](https://orcid.org/0000-0002-9959-4704) · [Google Scholar](https://scholar.google.com/citations?user=W_xdrwwAAAAJ) · [GitHub](https://github.com/fatihbozdag)\
+[ORCID](https://orcid.org/0000-0002-9959-4704) · [Google Scholar](https://scholar.google.com/citations?user=W_xdrwwAAAAJ) · [GitHub](https://github.com/fatihbozdag) · [OSF](https://osf.io/vz746/)\
 [fatihbozdag@osmaniye.edu.tr](mailto:fatihbozdag@osmaniye.edu.tr)
 :::
 :::
@@ -38,7 +38,7 @@ I teach discourse analysis, translation technology (CAT tools), medical and lega
 
 ## Selected recent work
 
-- Bozdağ, F. Ü. (2026). Modeling distributional stability in learner English passives: The Linguistic Clusters Framework. *Corpus Linguistics and Linguistic Theory*, 23(3). [doi](https://doi.org/10.1515/cllt-2025-0141) · [pdf](files/papers/bozdag-2026-cllt-linguistic-clusters.pdf) · [code](https://github.com/fatihbozdag/linguistic_clusters)
+- Bozdağ, F. Ü. (2026). Modeling distributional stability in learner English passives: The Linguistic Clusters Framework. *Corpus Linguistics and Linguistic Theory*, 23(3). [doi](https://doi.org/10.1515/cllt-2025-0141) · [pdf](files/papers/bozdag-2026-cllt-linguistic-clusters.pdf) · [code](https://github.com/fatihbozdag/linguistic_clusters) · [data](https://osf.io/kq7gv/)
 - Bozdağ, F. Ü., & Mo, J. (2026). Cross-linguistic influence in upper-intermediate to advanced L2 construction learning. *Lingua*, 341, 104239. [doi](https://doi.org/10.1016/j.lingua.2026.104239)
 - Bozdağ, F. Ü., Morris, G., & Mo, J. (2025). A corpus-based analysis of noun modifiers in L2 writing: The respective impact of L2 proficiency and L1 background. *PLOS ONE*, 20(3), e0320092. [doi](https://doi.org/10.1371/journal.pone.0320092) · [pdf](files/papers/bozdag-morris-mo-2025-plosone-noun-modifiers.pdf)
 - Bozdağ, F. Ü., Morris, G., & Mo, J. (2024). A Bayesian probabilistic analysis of the use of English modal verbs in L2 writing. *Heliyon*, 10(7), e28701. [doi](https://doi.org/10.1016/j.heliyon.2024.e28701) · [pdf](files/papers/bozdag-morris-mo-2024-heliyon-modal-verbs.pdf)

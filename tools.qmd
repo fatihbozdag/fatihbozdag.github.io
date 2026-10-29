@@ -3,7 +3,7 @@ title: "Tools & Data"
 subtitle: "Open-source software and replication material"
 ---
 
-Code and data behind my studies are released on [GitHub](https://github.com/fatihbozdag) where copyright allows. Everything below is Python unless stated otherwise.
+Code and data behind my studies are released on [GitHub](https://github.com/fatihbozdag) and the [Open Science Framework](https://osf.io/vz746/) where copyright allows. Everything below is Python unless stated otherwise.
 
 ## Software
 
@@ -17,7 +17,7 @@ Authorship attribution, author-group style comparison and forensic authorship an
 ::: {.tool}
 ### Linguistic Clusters Framework
 Pipeline for identifying stable distributional patterns in learner English passives: instance-level association measures (transitional probability, ΔP, boundary entropy), schema acceptance via NPMI or slot entropy, and validation by permutation, sensitivity and ablation analysis. Replication material for the *Corpus Linguistics and Linguistic Theory* (2026) article.
-[GitHub](https://github.com/fatihbozdag/linguistic_clusters)
+[GitHub](https://github.com/fatihbozdag/linguistic_clusters) · [OSF](https://osf.io/kq7gv/)
 :::
 
 ::: {.tool}

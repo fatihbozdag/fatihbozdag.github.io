@@ -18,4 +18,4 @@ Bölümde söylem çözümlemesi, bilgisayar destekli çeviri, tıp ve hukuk çe
 
 **Öğrenim:** Doktora, İngiliz Dili Eğitimi, Çukurova Üniversitesi (2019) · Yüksek lisans, aynı program (2014) · Lisans, İngilizce Öğretmenliği, Çukurova Üniversitesi (2011).
 
-[Yayınlar](../publications.qmd) · [Araçlar ve veri](../tools.qmd) · [Dersler](../teaching.qmd) · [ORCID](https://orcid.org/0000-0002-9959-4704) · [Google Scholar](https://scholar.google.com/citations?user=W_xdrwwAAAAJ) · [fatihbozdag@osmaniye.edu.tr](mailto:fatihbozdag@osmaniye.edu.tr)
+[Yayınlar](../publications.qmd) · [Araçlar ve veri](../tools.qmd) · [Dersler](../teaching.qmd) · [ORCID](https://orcid.org/0000-0002-9959-4704) · [Google Scholar](https://scholar.google.com/citations?user=W_xdrwwAAAAJ) · [OSF](https://osf.io/vz746/) · [fatihbozdag@osmaniye.edu.tr](mailto:fatihbozdag@osmaniye.edu.tr)
