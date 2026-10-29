@@ -27,9 +27,9 @@ Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Tra
   - A @ → 185.199.108.153 / 109.153 / 110.153 / 111.153
   - CNAME www → fatihbozdag.github.io
   - leave NS, SOA, `_dmarc` TXT as they are
-- GitHub repo: https://github.com/fatihbozdag/fatihbozdag.github.io (branch `main`).
+- GitHub repo: https://github.com/fatihbozdag/fatihbozdag.github.io (branch `main`). Deleted and recreated on 30 Oct 2026 to purge an early commit that held registrar details; the clean history was pushed to the new repository. Local backups are in `_ARCHIVE/` (git-excluded, never publish).
 - GitHub Pages: Source = "GitHub Actions" (switched 29 Oct 2026). Before the switch the Jekyll-rendered README was served instead of the Quarto build. The Quarto build (generator quarto-1.7.32) has been live since 29 Oct.
-- HTTPS: Let's Encrypt certificate issued 29 Oct 2026 (valid to 27 Jan 2027, renewed automatically by GitHub). HTTPS is enforced: http:// returns 301 to https://.
+- HTTPS: Let's Encrypt certificate issued 29 Oct 2026 (valid to 27 Jan 2027, renewed automatically by GitHub). HTTPS is enforced: http:// returns 301 to https://. After the recreation HTTPS was re-enforced on 30 Oct; the setting took effect only after the next deploy (Actions, Run workflow).
 - Health check: `curl -I https://fatihbozdag.com/publications.html` returns 200 and `https://www.fatihbozdag.com` returns 301 to the apex (both verified 29 Oct 2026).
 
 ## Open to-dos
