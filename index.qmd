@@ -31,7 +31,7 @@ Osmaniye Korkut Ata University, Türkiye
 :::
 
 ::: {}
-I am a linguist working at the intersection of corpus linguistics, Cognitive Linguistics and natural language processing. Most of my work asks how learners of English build and stabilise grammatical knowledge from usage, and how their first language shapes that process. I approach these questions with large learner corpora, construction-based descriptions of grammar, and probabilistic and Bayesian models.
+I am a researcher working at the intersection of corpus linguistics, Cognitive Linguistics and natural language processing. Most of my work asks how learners of English build and stabilise grammatical knowledge from usage, and how their first language shapes that process. I approach these questions with large learner corpora, construction-based descriptions of grammar, and probabilistic and Bayesian models.
 
 Three threads run through my research:
 
