@@ -22,7 +22,7 @@ Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Tra
 
 ## Infrastructure state (as of 2026-10-29)
 
-- Domain: fatihbozdag.com, registered 28 Oct 2026 via GoDaddy, 3 years, expires 28 Oct 2029, auto-renew on. Consider transferring to Cloudflare Registrar after the 60-day lock for cheaper renewals.
+- Domain: fatihbozdag.com, registered 28 Oct 2026 via GoDaddy, 3 years, expires 28 Oct 2029, auto-renew on. Registrar account details are in `CLAUDE.local.md` (not committed). Consider transferring to Cloudflare Registrar after the 60-day lock for cheaper renewals.
 - DNS (GoDaddy, ns37/ns38.domaincontrol.com):
   - A @ → 185.199.108.153 / 109.153 / 110.153 / 111.153
   - CNAME www → fatihbozdag.github.io
