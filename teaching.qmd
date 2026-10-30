@@ -32,3 +32,7 @@ Earlier (2015–2021) I taught English for general and specific purposes at the 
 ## For students
 
 Course materials are distributed through the university LMS. For thesis supervision, come with a corpus-based or discourse-analytic question you can answer with data you can actually obtain; I am glad to help you narrow it down.
+
+## Teaching materials
+
+[*Statistical Methods in Learner Corpus Research: An Interactive Companion*](stats/) presents fourteen lessons on the statistical methods used in learner corpus research, each with an interactive diagram, a prediction exercise and the questions a reviewer would ask about the method.

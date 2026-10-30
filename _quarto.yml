@@ -9,6 +9,7 @@ project:
     - robots.txt
     - files/**
     - pubs/**
+    - stats/**
 
 website:
   title: "Fatih Ünal Bozdağ"

@@ -33,6 +33,14 @@ Detection and classification of metadiscourse markers in academic text (Hyland's
 [MIT]{.meta}
 :::
 
+::: {.tool .featured}
+### Statistical Methods in Learner Corpus Research
+[Interactive companion]{.kicker}
+
+Fourteen lessons on the statistical methods behind my studies, from rates and their denominators to hierarchical Bayesian models, cross-fitting and the provenance of reported numbers. Each lesson explains one method, lets the reader test it on an invented example in an interactive diagram, and shows where the method appears in the papers.
+[Open the companion](stats/)
+:::
+
 ## Research code
 
 Smaller repositories that accompany individual studies.

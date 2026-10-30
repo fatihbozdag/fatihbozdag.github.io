@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="author" content="Fatih Ünal Bozdağ">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://fatihbozdag.com/stats/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Statistical Methods in Learner Corpus Research: An Interactive Companion">
+<meta property="og:description" content="An interactive companion to the statistical methods used in Fatih Ünal Bozdağ's research on learner corpora and construction grammar.">
+<meta property="og:url" content="https://fatihbozdag.com/stats/">
+<meta property="og:image" content="https://fatihbozdag.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Statistical Methods in Learner Corpus Research: An Interactive Companion</title>
+<meta name="description" content="An interactive companion to the statistical methods used in Fatih Ünal Bozdağ's research on learner corpora and construction grammar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a bound methods book. A cover page with the author and the publication list, then one lesson per page built around a turnable 3D ink diagram, its explanation, and its connection to the published papers. */
+:root{
+  --paper:#FFFFFF; --paper-2:#F5F5F4; --sheet:#F7F9FC; --ink:#1D1D1F; --muted:#5B6270; --accent:#1F3A5F;
+  --data:#B8660B; --model:#2F5D8C; --warn:#B23A36; --rule:#E5E5E3;
+  --display:"Source Sans 3", "Source Sans Pro", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#15181D; --paper-2:#1C2027; --sheet:#1D2530; --ink:#E4E6EA; --muted:#A0A7B3; --accent:#A9C4E8;
+  --data:#F2A43B; --model:#8FB3E0; --warn:#EE7D70; --rule:#2E343D; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --paper:#15181D; --paper-2:#1C2027; --sheet:#1D2530; --ink:#E4E6EA; --muted:#A0A7B3; --accent:#A9C4E8;
+  --data:#F2A43B; --model:#8FB3E0; --warn:#EE7D70; --rule:#2E343D; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17.5px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+a{color:var(--accent);text-underline-offset:2px}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--model);outline-offset:2px}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+header.top .inner{max-width:1240px;margin:0 auto;padding-block:12px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;justify-content:space-between}
+.brand{font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+.byline{font-size:14px;color:var(--muted)}
+.layout{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px;padding-block:28px 40px}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 70px);align-self:start;max-height:calc(100vh - 96px);overflow:auto}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+nav.toc a{display:grid;grid-template-columns:34px 1fr 10px;gap:6px;align-items:baseline;padding:6px 8px;border-radius:6px;text-decoration:none;color:var(--ink);font-family:var(--display);font-size:14.5px;line-height:1.3}
+nav.toc a small{font-family:var(--mono);color:var(--muted);font-size:11px}
+nav.toc a[aria-current="page"]{background:var(--paper-2)}
+nav.toc .dot{width:7px;height:7px;border-radius:50%;border:1px solid var(--rule)}
+nav.toc .dot.on{background:var(--data);border-color:var(--data)}
+nav.toc .home{display:block;padding:6px 8px 10px;font-family:var(--display);font-size:14.5px;text-decoration:none;color:var(--muted)}
+main{min-width:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,4.2vw,46px);line-height:1.06;letter-spacing:-.02em;margin:.25em 0 .3em;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:21px;margin:1.4em 0 .4em;text-wrap:balance}
+h3{font-family:var(--display);font-weight:600;font-size:17px;margin:0 0 .4em}
+.lede{font-size:21px;line-height:1.45;max-width:58ch;margin:0 0 18px;color:var(--ink)}
+.prose{max-width:68ch}
+.prose p{margin:0 0 .85em}
+.formula{font-family:var(--body);font-size:18px;background:var(--sheet);border:1px solid var(--rule);border-radius:4px;padding:12px 16px;margin:14px 0 20px;overflow-x:auto;max-width:68ch}
+.formula i{font-style:italic}.formula .eq{white-space:nowrap}.formula small{display:block;font-size:14px;color:var(--muted);margin-top:6px}
+.desk{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:18px;align-items:start;margin-top:8px}
+.stage{position:relative;background:var(--sheet);border:1px solid var(--rule);border-radius:4px;aspect-ratio:16/10;max-width:100%;overflow:hidden;touch-action:none;cursor:grab}
+.stage:active{cursor:grabbing}.stage canvas{display:block;width:100%;height:100%}
+.stage .hint{position:absolute;left:12px;bottom:10px;font-family:var(--mono);font-size:11px;color:var(--muted);pointer-events:none}
+.stage .nogl{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted);font-size:15px}
+.bench{display:flex;flex-direction:column;gap:14px;min-width:0}
+.controls{display:grid;gap:12px}
+.ctl label{display:flex;justify-content:space-between;gap:8px;font-family:var(--display);font-size:14px}
+.ctl output{font-family:var(--mono);font-size:13px;color:var(--data)}
+.ctl input[type=range]{width:100%;accent-color:var(--data)}
+.check{display:flex;gap:8px;align-items:center;font-family:var(--display);font-size:14px}
+.btnrow{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-block;border:1px solid var(--ink);background:transparent;border-radius:999px;padding:6px 14px;font-family:var(--display);font-size:14px;cursor:pointer;text-decoration:none;color:var(--ink)}
+.btn:hover{background:var(--paper-2)}.btn.primary{background:var(--ink);color:var(--paper)}
+.readout{font-family:var(--mono);font-size:13px;line-height:1.7;background:var(--paper-2);border-radius:4px;padding:10px 12px;font-variant-numeric:tabular-nums;overflow-x:auto}
+.readout .k{color:var(--muted)}.readout .d{color:var(--data)}.readout .m{color:var(--model)}.readout .w{color:var(--warn)}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.howto{font-size:15px;color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:22px;margin-top:26px}
+.card{border-top:2px solid var(--ink);padding-top:12px;min-width:0}
+.card p{margin:0 0 .65em}
+.opts{display:grid;gap:8px;margin:10px 0}
+.opt{text-align:left;border:1px solid var(--rule);background:var(--sheet);border-radius:6px;padding:9px 12px;cursor:pointer;font-family:var(--body);font-size:16px}
+.opt[aria-pressed="true"]{border-color:var(--data);box-shadow:inset 0 0 0 1px var(--data)}
+.opt.right{border-color:var(--model);box-shadow:inset 0 0 0 1px var(--model)}
+.flap{position:relative;margin-top:12px;perspective:900px}
+.flap .under{background:var(--paper-2);border-radius:6px;padding:14px 16px}.flap .under p{margin:0}
+.flap .cover{position:absolute;inset:0;background:var(--ink);color:var(--paper);border-radius:6px;display:grid;place-items:center;font-family:var(--display);font-size:15px;transform-origin:top;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .7s;cursor:pointer;border:none;width:100%;padding:8px}
+.flap.open .cover{transform:rotateX(-100deg);opacity:0;pointer-events:none}
+.flap .cover[disabled]{cursor:not-allowed}
+.research{border-left:3px solid var(--data);padding:2px 0 2px 14px}
+.cite{font-size:15px;color:var(--muted);margin-top:8px}
+.cite .status{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1px solid currentColor;border-radius:3px;padding:0 5px;margin-right:6px;white-space:nowrap}
+.status.pub{color:var(--model)}.status.press{color:var(--data)}.status.rev{color:var(--muted)}
+ul.pit{margin:.2em 0 0;padding-left:1.1em}ul.pit li{margin-bottom:.4em}
+details.viva summary{cursor:pointer;font-family:var(--display);font-size:15.5px}
+details.viva p{margin:.6em 0 0}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:34px;flex-wrap:wrap}
+.num-in{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.num-in input{width:100%;font-family:var(--mono);font-size:13px;padding:6px;border:1px solid var(--rule);border-radius:4px;background:var(--sheet)}
+.shelfbtns{display:flex;flex-wrap:wrap;gap:6px}
+/* cover */
+.cover-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:center}
+.author{font-family:var(--display);font-size:16px;margin:.2em 0 1em}.author a{color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:16px;margin:10px 0 0}
+.steps div{border-top:1px solid var(--rule);padding-top:8px;font-size:15.5px}
+.steps b{display:block;font-family:var(--display);font-size:15px}
+.index{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:10px;margin-top:10px}
+.index a{display:block;border:1px solid var(--rule);border-radius:6px;padding:10px 12px;text-decoration:none;color:var(--ink);background:var(--sheet)}
+.index a small{font-family:var(--mono);font-size:11px;color:var(--muted);display:block}
+.index a b{font-family:var(--display);font-weight:600;font-size:15.5px;display:block;margin:2px 0}
+.index a span{font-size:14px;color:var(--muted)}
+.refs{list-style:none;padding:0;margin:0;display:grid;gap:12px;max-width:80ch}
+.refs li{padding-left:2em;text-indent:-2em;font-size:15.5px}
+footer{border-top:1px solid var(--rule);margin-top:10px}
+footer .inner{max-width:1240px;margin:0 auto;padding-block:18px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:18px}
+  nav.toc{position:static;max-height:none}
+  nav.toc ol{grid-auto-flow:column;grid-auto-columns:minmax(210px,1fr);overflow-x:auto;padding-bottom:6px}
+  .desk,.cover-hero{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion: reduce){ .flap .cover{transition:none} }
+
+h1,h2,h3{font-family:var(--body);font-weight:600;color:var(--accent);letter-spacing:0}
+.brand{font-family:var(--body);font-weight:600}
+</style>
+
+<style>.byline{text-decoration:none}.byline:hover{text-decoration:underline}</style>
+</head>
+<body>
+
+<header class="top wrap"><div class="inner">
+  <a class="brand" href="#about">Statistical Methods in Learner Corpus Research</a>
+  <a class="byline" href="/">Fatih Ünal Bozdağ · Osmaniye Korkut Ata University</a>
+</div></header>
+
+<div class="wrap"><div class="layout">
+  <nav class="toc" aria-label="Lessons"><a class="home" href="#about">About this book</a><ol id="toc"></ol></nav>
+  <main id="view" aria-live="polite"></main>
+</div></div>
+
+<footer class="wrap"><div class="inner">
+  <span>© 2026 Fatih Ünal Bozdağ. All examples in the diagrams use invented data; figures from the papers are quoted from their published or accepted versions.</span>
+  <span>Interactive diagrams drawn with Three.js.</span>
+</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+"use strict";
+/* ---------- numerics ---------- */
+function rng(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function gauss(r){let u=0,v=0;while(!u)u=r();while(!v)v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+const sig=x=>1/(1+Math.exp(-x)), logit=p=>Math.log(p/(1-p));
+function lgamma(z){const g=7,c=[0.99999999999980993,676.5203681218851,-1259.1392167224028,771.32342877765313,-176.61502916214059,12.507343278686905,-0.13857109526572012,9.9843695780195716e-6,1.5056327351493116e-7];if(z<0.5)return Math.log(Math.PI/Math.sin(Math.PI*z))-lgamma(1-z);z-=1;let x=c[0];for(let i=1;i<g+2;i++)x+=c[i]/(z+i);const t=z+g+0.5;return 0.5*Math.log(2*Math.PI)+(z+0.5)*Math.log(t)-t+Math.log(x)}
+function betaPdf(x,a,b){if(x<=0||x>=1)return 0;return Math.exp((a-1)*Math.log(x)+(b-1)*Math.log(1-x)-(lgamma(a)+lgamma(b)-lgamma(a+b)))}
+function betaHDI(a,b,mass){const N=10000,xs=[],ps=[];for(let i=1;i<N;i++){const x=i/N;xs.push(x);ps.push(betaPdf(x,a,b))}const tot=ps.reduce((s,v)=>s+v,0);const idx=ps.map((p,i)=>[p,i]).sort((u,v)=>v[0]-u[0]);let acc=0,lo=1,hi=0;for(const [p,i] of idx){acc+=p;lo=Math.min(lo,xs[i]);hi=Math.max(hi,xs[i]);if(acc/tot>=mass)break}return[lo,hi]}
+function nbPmf(k,mu,phi){return Math.exp(lgamma(k+phi)-lgamma(phi)-lgamma(k+1)+phi*Math.log(phi/(phi+mu))+k*Math.log(mu/(phi+mu)))}
+function mean(a){return a.reduce((s,v)=>s+v,0)/a.length}
+function sd(a){const m=mean(a);return Math.sqrt(a.reduce((s,v)=>s+(v-m)**2,0)/(a.length-1))}
+function corr(x,y){const mx=mean(x),my=mean(y);let sxy=0,sx=0,sy=0;for(let i=0;i<x.length;i++){sxy+=(x[i]-mx)*(y[i]-my);sx+=(x[i]-mx)**2;sy+=(y[i]-my)**2}return sxy/Math.sqrt(sx*sy)}
+const f=(x,d=2)=>Number(x).toLocaleString("en-US",{minimumFractionDigits:d,maximumFractionDigits:d});
+const fi=x=>Math.round(x).toLocaleString("en-US");
+
+/* ---------- 3D page ---------- */
+const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const V={};
+function cssColor(name){return getComputedStyle(document.documentElement).getPropertyValue(name).trim()}
+function palette(){return{ink:cssColor("--ink"),data:cssColor("--data"),model:cssColor("--model"),warn:cssColor("--warn"),sheet:cssColor("--sheet"),muted:cssColor("--muted")}}
+let gl=null;
+function initGL(){
+  try{
+    if(!window.THREE)throw new Error("no three");
+    const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+    const scene=new THREE.Scene(), root=new THREE.Group(); scene.add(root);
+    scene.add(new THREE.HemisphereLight(0xffffff,0x9a9a9a,0.8));const sun=new THREE.DirectionalLight(0xffffff,0.45);sun.position.set(3,7,5);scene.add(sun);
+    const camera=new THREE.PerspectiveCamera(34,1.6,0.1,200);
+    gl={renderer,scene,root,camera,theta:-0.55,phi:1.12,r:10,target:new THREE.Vector3(0,1.1,0),dragging:false,last:0,idle:0};
+    const el=renderer.domElement;
+    el.addEventListener("pointerdown",e=>{gl.dragging=true;gl.px=e.clientX;gl.py=e.clientY;el.setPointerCapture(e.pointerId)});
+    el.addEventListener("pointermove",e=>{if(!gl.dragging)return;gl.theta-=(e.clientX-gl.px)*0.008;gl.phi=Math.min(1.5,Math.max(0.35,gl.phi-(e.clientY-gl.py)*0.006));gl.px=e.clientX;gl.py=e.clientY;gl.idle=0});
+    el.addEventListener("pointerup",()=>{gl.dragging=false});
+    el.addEventListener("pointercancel",()=>{gl.dragging=false});
+    const loop=t=>{const dt=Math.min(64,t-(gl.last||t));gl.last=t;gl.idle+=dt;
+      if(!reduced&&!gl.dragging&&gl.idle>2500)gl.theta+=Math.sin(t/4200)*0.0009*dt/16;
+      if(gl.tick)gl.tick(dt);
+      const c=gl.camera,s=Math.sin(gl.phi);c.position.set(gl.target.x+gl.r*s*Math.sin(gl.theta),gl.target.y+gl.r*Math.cos(gl.phi),gl.target.z+gl.r*s*Math.cos(gl.theta));c.lookAt(gl.target);
+      renderer.render(scene,c);requestAnimationFrame(loop)};
+    requestAnimationFrame(loop);
+    return true;
+  }catch(e){gl=null;return false}
+}
+function mount(stage){
+  if(!gl){stage.innerHTML='<div class="nogl">This diagram needs 3D graphics, which your browser could not start. Every number below still updates from the controls.</div>';return}
+  stage.prepend(gl.renderer.domElement);
+  const fit=()=>{const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;gl.renderer.setSize(w,h,false);gl.camera.aspect=w/h;gl.camera.updateProjectionMatrix()};
+  if(gl.ro)gl.ro.disconnect();gl.ro=new ResizeObserver(fit);gl.ro.observe(stage);fit();
+}
+function clearRoot(){if(!gl)return;while(gl.root.children.length){const o=gl.root.children.pop();o.traverse(n=>{if(n.geometry)n.geometry.dispose();if(n.material){if(n.material.map)n.material.map.dispose();n.material.dispose()}})}}
+/* drawing kit: ink edges on a pale fill, accent fills for data (amber), model (blue), warning (red) */
+const K={
+  col(tone){const p=palette();return({ink:p.ink,data:p.data,model:p.model,warn:p.warn,ghost:p.muted})[tone]||p.ink},
+  box(o){if(!gl)return;const g=new THREE.BoxGeometry(Math.max(o.w,1e-3),Math.max(o.h,1e-3),Math.max(o.d||0.6,1e-3));
+    const Mat=(o.tone||"ghost")==="ghost"?THREE.MeshBasicMaterial:THREE.MeshLambertMaterial;const fill=new THREE.Mesh(g,new Mat({color:K.col(o.tone||"ghost"),transparent:true,opacity:o.op??(o.tone==="ghost"?0.06:0.5),depthWrite:false}));
+    const edge=new THREE.LineSegments(new THREE.EdgesGeometry(g),new THREE.LineBasicMaterial({color:K.col(o.edge||"ink"),transparent:true,opacity:o.eop??0.85}));
+    const grp=new THREE.Group();grp.add(fill,edge);grp.position.set(o.x||0,(o.y||0)+o.h/2,o.z||0);gl.root.add(grp);return grp},
+  ball(o){if(!gl)return;const g=new THREE.SphereGeometry(o.r||0.12,20,14);const m=new THREE.Mesh(g,new THREE.MeshLambertMaterial({color:K.col(o.tone||"data"),transparent:true,opacity:o.op??0.9}));m.position.set(o.x,o.y,o.z||0);gl.root.add(m);return m},
+  line(pts,tone,op){if(!gl)return;const g=new THREE.BufferGeometry().setFromPoints(pts.map(p=>new THREE.Vector3(p[0],p[1],p[2]||0)));const l=new THREE.Line(g,new THREE.LineBasicMaterial({color:K.col(tone||"ink"),transparent:true,opacity:op??0.9}));gl.root.add(l);return l},
+  tube(pts,tone,rad){if(!gl||pts.length<2)return;const curve=new THREE.CatmullRomCurve3(pts.map(p=>new THREE.Vector3(p[0],p[1],p[2]||0)));const g=new THREE.TubeGeometry(curve,Math.max(24,pts.length*2),rad||0.035,8,false);const m=new THREE.Mesh(g,new THREE.MeshLambertMaterial({color:K.col(tone||"model")}));gl.root.add(m);return m},
+  page(w,d){if(!gl)return;const g=new THREE.PlaneGeometry(w,d);g.rotateX(-Math.PI/2);const m=new THREE.Mesh(g,new THREE.MeshBasicMaterial({color:K.col("ghost"),transparent:true,opacity:0.05,depthWrite:false}));gl.root.add(m);
+    const e=new THREE.LineSegments(new THREE.EdgesGeometry(g),new THREE.LineBasicMaterial({color:K.col("ink"),transparent:true,opacity:0.35}));gl.root.add(e);
+    const ticks=[];for(let i=1;i<10;i++){const x=-w/2+w*i/10;ticks.push([x,0,-d/2],[x,0,-d/2+0.12])}const tg=new THREE.BufferGeometry().setFromPoints(ticks.map(p=>new THREE.Vector3(...p)));gl.root.add(new THREE.LineSegments(tg,new THREE.LineBasicMaterial({color:K.col("ink"),transparent:true,opacity:0.3})))},
+  /* text drawn on a canvas and shown as a sprite that always faces the reader */
+  label(text,o){if(!gl)return;o=o||{};const px=96,fam=cssColor("--display")||"sans-serif",font=`${o.bold?"600 ":""}${px}px ${fam}`;
+    const cv=document.createElement("canvas"),cx=cv.getContext("2d");cx.font=font;const w=Math.ceil(cx.measureText(text).width)+24;cv.width=w;cv.height=px*1.3;
+    cx.font=font;cx.textBaseline="middle";cx.fillStyle=K.col(o.tone||"ink");cx.fillText(text,12,cv.height/2);
+    const tex=new THREE.CanvasTexture(cv);tex.minFilter=THREE.LinearFilter;const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:tex,transparent:true,depthTest:false,opacity:o.op??1}));
+    const h=(o.size||0.24)*1.45,sw=h*cv.width/cv.height;sp.scale.set(sw,h*1.0,1);const ax=o.anchor==="left"?sw/2:o.anchor==="right"?-sw/2:0;
+    sp.position.set((o.x||0)+ax,o.y||0,o.z||0);sp.renderOrder=10;gl.root.add(sp);return sp},
+  /* horizontal axis along x at height y and depth z, ticks given as [x, text] */
+  xaxis(o){if(!gl)return;const z=o.z??1.6,y=o.y??0;K.line([[o.from,y,z],[o.to,y,z]],"ink",0.55);const t=[];
+    o.ticks.forEach(([x,s])=>{t.push([x,y,z],[x,y,z+0.12]);K.label(s,{x,y,z:z+0.38,size:o.size||0.22,tone:"muted"})});
+    const g=new THREE.BufferGeometry().setFromPoints(t.map(p=>new THREE.Vector3(...p)));gl.root.add(new THREE.LineSegments(g,new THREE.LineBasicMaterial({color:K.col("ink"),transparent:true,opacity:0.55})));
+    if(o.title)K.label(o.title,{x:(o.from+o.to)/2,y,z:z+0.8,size:0.25,tone:"ink"})},
+  /* vertical axis at x, z, ticks given as [y, text] */
+  yaxis(o){if(!gl)return;const x=o.x,z=o.z??0,top=o.top;K.line([[x,0,z],[x,top,z]],"ink",0.55);const t=[];
+    o.ticks.forEach(([y,s])=>{t.push([x,y,z],[x-0.12,y,z]);K.label(s,{x:x-0.2,y,z,size:o.size||0.22,tone:"muted",anchor:"right"})});
+    const g=new THREE.BufferGeometry().setFromPoints(t.map(p=>new THREE.Vector3(...p)));gl.root.add(new THREE.LineSegments(g,new THREE.LineBasicMaterial({color:K.col("ink"),transparent:true,opacity:0.55})));
+    if(o.title)K.label(o.title,{x,y:top+0.35,z,size:0.25,tone:"ink"})},
+  cam(r,target){if(!gl)return;gl.r=r;gl.target.set(...target)},
+  /* frame everything drawn: centre the target on the scene and back off until it fits */
+  fit(pad){if(!gl)return;const box=new THREE.Box3();gl.root.children.forEach(o=>{if(!o.isSprite)box.expandByObject(o);else{const p=o.position,hw=o.scale.x/2,hh=o.scale.y/2;box.expandByPoint(new THREE.Vector3(p.x-hw,p.y-hh,p.z));box.expandByPoint(new THREE.Vector3(p.x+hw,p.y+hh,p.z))}});if(box.isEmpty())return;
+    const c=box.getCenter(new THREE.Vector3()),rad=box.getSize(new THREE.Vector3()).length()/2,fov=gl.camera.fov*Math.PI/360,asp=Math.max(0.6,Math.min(1.8,gl.camera.aspect));
+    gl.target.copy(c);gl.r=rad/Math.tan(fov)*(pad||0.66)/Math.min(1,asp*0.95)}
+};
+
+
+/* ---------- publications ---------- */
+const REFS={
+ dative:{st:"pub",key:"Bozdağ, 2024",apa:'Bozdağ, F. Ü. (2024). Probabilistic analysis of English dative constructions in academic writings of English EFL learners. <i>Theory and Practice of Second Language Acquisition, 10</i>(1), 1–24. <a href="https://doi.org/10.31261/TAPSLA.13902" target="_blank" rel="noopener">https://doi.org/10.31261/TAPSLA.13902</a>'},
+ egca:{st:"pub",key:"Bozdağ, 2026a",apa:'Bozdağ, F. Ü. (2026a). Ghosts of L1 evidentiality: Constructional transfer in L2 English hedging. <i>Çankaya University Journal of Humanities and Social Sciences, 20</i>(2), 411–434. <a href="https://doi.org/10.47777/cankujhss.1902350" target="_blank" rel="noopener">https://doi.org/10.47777/cankujhss.1902350</a>'},
+ cllt:{st:"pub",key:"Bozdağ, 2026b",apa:'Bozdağ, F. Ü. (2026b). Modeling distributional stability in learner English passives: The Linguistic Clusters Framework. <i>Corpus Linguistics and Linguistic Theory</i>. Advance online publication. <a href="https://doi.org/10.1515/cllt-2025-0141" target="_blank" rel="noopener">https://doi.org/10.1515/cllt-2025-0141</a>'},
+ lingua:{st:"pub",key:"Bozdağ & Mo, 2026",apa:'Bozdağ, F. Ü., &amp; Mo, J. (2026). Cross-linguistic influence in upper-intermediate to advanced L2 construction learning: A multidimensional analysis of L1 effects on probability, frequency, diversity, and verb-construction associations. <i>Lingua, 341</i>, 104239. <a href="https://doi.org/10.1016/j.lingua.2026.104239" target="_blank" rel="noopener">https://doi.org/10.1016/j.lingua.2026.104239</a>'},
+ passive:{st:"press",key:"Bozdağ, in press",apa:'Bozdağ, F. Ü. (in press). Native and learner verb preferences as predictors of passive use in L2 English writing. <i>Language and Cognition</i>.'},
+};
+const STATUS={pub:["pub","Published"],press:["press","In press"]};
+function refLine(k){const r=REFS[k],s=STATUS[r.st];return `<div class="cite"><span class="status ${s[0]}">${s[1]}</span>${r.apa}</div>`}
+const PAPERS=[
+ ["lingua","Cross-linguistic influence on construction learning","Bayesian hierarchical models of probability (Bernoulli, complementary log–log link, length offset), frequency (Poisson with offset and verb random effects) and lexical diversity (Student-t on entropy), with Fisher's exact collostructional analysis; 9,529 ICLE essays from 34 L1 backgrounds."],
+ ["egca","Evidentiality and L2 hedging","A rule-based and LLM-validated hedge detector, then hierarchical multinomial, Bernoulli and Beta regressions with L1 and text random effects, a ZOIB sensitivity analysis and PSIS-LOO model comparison; 1,011 essays."],
+ ["cllt","The Linguistic Clusters Framework","A multi-metric procedure for distributional stability in learner passives (transitional probability, directional contingency, boundary entropy, NPMI and slot entropy) with permutation, sensitivity and ablation analyses; 57,090 valid passives from 9,529 ICLE texts."],
+ ["dative","The dative alternation in learner writing","Bayesian logistic regression in rstanarm across 27 L1 subcorpora of ICLE, summarized by posterior medians, 89% intervals, probability of direction, the ROPE and Bayes factors."],
+ ["passive","Native and learner verb preferences in passive use","A two-stage Bayesian hurdle model (logistic selection and zero-truncated negative binomial intensity) with crossed learner and topic intercepts and a cross-fitted learner deviation term; 84,591 EFCAMDAT texts."],
+];
+
+/* ---------- data for the diagrams (invented) ---------- */
+const ESSAYS=[[200,2],[350,7],[150,0],[500,4],[300,9]];
+const POP=(()=>{const r=rng(7),a=[];for(let i=0;i<4000;i++)a.push(Math.exp(2.4+0.75*gauss(r)));return a})();
+const SCATTER=(()=>{const r=rng(11),x=[],y=[];for(let i=0;i<320;i++){x.push(gauss(r));y.push(gauss(r))}return{x,y}})();
+
+/* ---------- lessons ---------- */
+const L=[
+{id:1,part:"I",area:"Describing data",title:"Rates and their denominators",blurb:"Why the pooled rate and the mean of text rates answer different questions.",
+ lede:"A count from a corpus becomes comparable only once it is divided by the opportunity the writer had to produce it.",
+ idea:`<p>A raw count mixes two things, how readily a writer uses a form and how much the writer wrote. Dividing by an exposure turns the count into a rate, and the choice of exposure is part of the claim. Words measure how dense the form is in running text, whereas the number of clauses that could have hosted the form measures how often the writer chose it when the choice was available.</p><p>Once a rate has been computed for each text, two summaries are possible. The pooled rate divides all occurrences by all words, so that it describes the corpus as one body of text in which long texts weigh more. The mean of text rates gives every text one vote and describes the typical writer. The two diverge whenever text length is related to the rate, and each is correct for its own question. Because text-level rates are usually skewed, with many low values and a long upper tail, the median of text rates is often the most informative single description.</p>`,
+ formula:`<span class="eq">pooled rate = (Σ<i>k</i><sub>i</sub> / Σ<i>w</i><sub>i</sub>) × 1,000</span> &nbsp;&nbsp; <span class="eq">mean of rates = (1/<i>n</i>) Σ (<i>k</i><sub>i</sub> / <i>w</i><sub>i</sub> × 1,000)</span><small><i>k</i><sub>i</sub> is the count and <i>w</i><sub>i</sub> the number of words in text <i>i</i>.</small>`,
+ howto:"Each bar is an essay, as wide as its length and as tall as its rate. The blue plane is the pooled rate and the grey plane the mean of text rates. Lengthen T5, whose rate stays at 30 per 1,000 words, and only the pooled rate moves.",
+ cam:[11,[0,1.2,0]],controls:[{id:"w5",label:"Length of essay T5 (words)",min:100,max:2000,step:50,value:300}],
+ predict:{q:"With T5 at 300 words, which summary is higher?",opts:["The pooled rate","The mean of the five text rates","They are equal"],right:0,why:"The pooled rate is 14.67 per 1,000 words and the mean of text rates 13.60. The two high-rate essays, T2 and T5, are longer than average and the zero-rate essay T3 is the shortest, so weighting by length favours the high rates."},
+ draw(v){const es=ESSAYS.map((e,i)=>i===4?[v.w5,0.03*v.w5]:e);const W=es.reduce((s,e)=>s+e[0],0);const rates=es.map(e=>1000*e[1]/e[0]);const pooled=1000*es.reduce((s,e)=>s+e[1],0)/W,mrate=mean(rates);
+  K.page(8,3);let x=-3.6;const sc=2.6/40;es.forEach((e,i)=>{const w=6.6*e[0]/W;K.box({w:w*0.92,h:rates[i]*sc,d:1,x:x+w/2,tone:"data"});K.label("T"+(i+1),{x:x+w/2,y:0.02,z:0.9,size:0.24,tone:"muted"});K.label(f(rates[i],1),{x:x+w/2,y:rates[i]*sc+0.2,size:0.2,tone:"data"});x+=w});
+  K.yaxis({x:-3.9,z:-0.5,top:2.6,ticks:[0,10,20,30,40].map(t=>[t*sc,String(t)]),title:"per 1,000 words"});
+  K.box({w:7.4,h:0.012,d:1.4,y:pooled*sc,tone:"model",op:0.22,edge:"model"});K.box({w:7.4,h:0.012,d:1.4,y:mrate*sc,tone:"ink",op:0.12,eop:0.45});K.label("pooled "+f(pooled),{x:3.8,y:pooled*sc+(pooled>=mrate?0.17:-0.17),tone:"model",anchor:"left",size:0.22});K.label("mean "+f(mrate),{x:3.8,y:mrate*sc+(pooled>=mrate?-0.17:0.17),tone:"ink",anchor:"left",size:0.22});
+  return `<span class="k">pooled rate</span>   <span class="m">${f(pooled)}</span> per 1,000 words\n<span class="k">mean of rates</span> ${f(mrate)} per 1,000 words\n<span class="k">T5</span> ${fi(v.w5)} words at 30 per 1,000`},
+ legend:[["data","essay rate"],["model","pooled rate"],["ink","mean of text rates"]],
+ pitfalls:["Comparing pooled rates between groups whose texts differ systematically in length.","Reporting a rate without its denominator, or with words where the claim concerns choices."],
+ research:`<p>In the study of construction learning across 34 first languages, the descriptive statistics are text-level rates per 1,000 words summarized by medians, because the rates are skewed; for the transitive and voice family the median is 84.05 per 1,000 words (Bozdağ &amp; Mo, 2026).</p><p>In the passive study the denominator is the number of clauses that could have been passive, not words. The 114 texts without such a clause are therefore excluded, which is why 84,705 analytic texts yield 84,591 fitted ones (Bozdağ, in press).</p>`,refs:["lingua","passive"],
+ viva:["Why are rates reported per text rather than as one corpus rate?","The pooled rate describes the corpus as a body of text, the mean or median of text rates the typical writer. Because writers contribute texts of unequal length, inference is made at the text level, with writers as a grouping factor in the models."]},
+{id:2,part:"II",area:"Inference",title:"Sampling variability and intervals",blurb:"The standard error, the square-root law and what an interval width means.",
+ lede:"Every estimate would come out differently in another sample, and the standard error says by how much.",
+ idea:`<p>If many samples of <i>n</i> texts were drawn from the same population, their means would scatter around the population mean. That scatter is the sampling distribution, and its standard deviation, the standard error, is σ/√<i>n</i>. Because of the square root, four times as much data halves the uncertainty rather than quartering it.</p><p>The interval a paper reports summarizes this uncertainty. A frequentist 95% confidence interval is produced by a procedure that covers the true value in 95% of repeated samples. A Bayesian 94% highest density interval contains 94% of the posterior probability for the parameter, given the data and the model. The width, whether 89%, 94% or 95%, is a reporting convention. It is not a threshold with inferential meaning, and the conclusion should not depend on it.</p><p>The square-root law also explains why tokens nested in writers carry less information than their number suggests. Tokens from one writer share that writer's habits, so the effective sample size lies between the number of writers and the number of tokens.</p>`,
+ formula:`<span class="eq">SE(x̄) = σ / √<i>n</i></span><small>σ is the standard deviation of the population and <i>n</i> the sample size.</small>`,
+ howto:"Each draw takes 200 samples of n texts from an invented, skewed population of 4,000 text rates and piles their means into the amber columns. The blue line marks the population mean. Compare the observed spread with σ/√n.",
+ cam:[11,[0,1.2,0]],controls:[{id:"n",label:"Sample size n",min:5,max:80,step:1,value:10}],buttons:[["Draw 200 samples","draw"],["Clear","clear"]],
+ predict:{q:"If n goes from 10 to 40, the spread of the sample means will",opts:["halve","fall to a quarter","stay the same"],right:0,why:"The standard error is σ/√n, so four times the sample size halves it. Draw at n = 10, clear, then draw at n = 40 and compare the observed standard deviations."},
+ init(s){s.means=[];this.act("draw",{n:10},s)},
+ act(a,v,s){if(a==="clear")s.means=[];if(a==="draw"){const r=rng(s.means.length*31+v.n*7+1);for(let j=0;j<200;j++){let t=0;for(let i=0;i<v.n;i++)t+=POP[Math.floor(r()*POP.length)];s.means.push(t/v.n)}}},
+ onchange(id,s){if(id==="n")s.means=[]},
+ draw(v,s){K.page(8,3);const B=24,lo=0,hi=40,bins=new Array(B).fill(0);s.means.forEach(m=>{const b=Math.min(B-1,Math.max(0,Math.floor((m-lo)/(hi-lo)*B)));bins[b]++});const mx=Math.max(8,...bins);
+  bins.forEach((c,i)=>{if(c)K.box({w:7/B*0.9,h:2.6*c/mx,d:1,x:-3.5+7*(i+0.5)/B,tone:"data"})});const pm=mean(POP);K.box({w:0.03,h:2.9,d:0.03,x:-3.5+7*(pm-lo)/(hi-lo),tone:"model",edge:"model",op:0.9});K.label("population mean",{x:-3.5+7*(pm-lo)/(hi-lo),y:3.15,tone:"model",size:0.22});
+  K.xaxis({from:-3.5,to:3.5,z:0.75,ticks:[0,10,20,30,40].map(t=>[-3.5+7*t/40,String(t)]),title:"mean of the sample"});
+  const se=sd(POP)/Math.sqrt(v.n);return `<span class="k">population mean</span> ${f(pm)}   <span class="k">SD</span> ${f(sd(POP))}\n<span class="k">σ/√n</span> <span class="m">${f(se)}</span>\n<span class="k">observed SD of ${s.means.length} sample means</span> <span class="d">${s.means.length>2?f(sd(s.means)):"draw first"}</span>`},
+ legend:[["data","sample means"],["model","population mean"]],
+ pitfalls:["Treating thousands of tokens from a few hundred writers as independent observations.","Reading the interval width, 89%, 94% or 95%, as if it were a significance level."],
+ research:`<p>The study of L1 effects on construction learning treats an effect as credible when its 94% highest density interval excludes zero (Bozdağ &amp; Mo, 2026). The dative study reports posterior medians with 89% intervals (Bozdağ, 2024). The two widths are conventions; in both papers the conclusions rest on the location and size of the posterior, not on the chosen width.</p>`,refs:["lingua","dative"],
+ viva:["Why are 10,000 passive tokens from 300 learners not 10,000 observations?","Tokens from one learner share that learner's preferences and topics, so they carry less information than independent draws. The effective sample size lies between the two numbers, which is why the models include learner random effects."]},
+{id:3,part:"III",area:"Validation",title:"An interval for a proportion",blurb:"Why the Wilson interval replaces the Wald interval near 0 and 1.",
+ lede:"When a tagger or a coder is checked on a sample, the accuracy figure needs an interval that respects the limits of a proportion.",
+ idea:`<p>Annotation and extraction are validated by checking a sample of items against a reference, which yields a proportion such as precision or accuracy. The textbook Wald interval adds and subtracts 1.96 standard errors to that proportion. It assumes a symmetric sampling distribution, which fails when the proportion is close to 0 or 1 or the sample is small, and it can then produce limits below 0 or above 1.</p><p>The Wilson interval inverts the score test instead. It is asymmetric when the estimate is near a boundary, it never leaves the range from 0 to 1, and its coverage stays close to the nominal 95% in small samples. Agreement between two coders is a separate question, answered by Cohen's κ, which subtracts the agreement expected by chance from the observed agreement, so that high raw agreement on a frequent category can coexist with a moderate κ.</p>`,
+ formula:`<span class="eq">Wald: <i>p̂</i> ± <i>z</i> √(<i>p̂</i>(1 − <i>p̂</i>)/<i>n</i>)</span> &nbsp;&nbsp; <span class="eq">Wilson: [<i>p̂</i> + <i>z</i>²/2<i>n</i> ± <i>z</i> √(<i>p̂</i>(1 − <i>p̂</i>)/<i>n</i> + <i>z</i>²/4<i>n</i>²)] / (1 + <i>z</i>²/<i>n</i>)</span><small><i>p̂</i> = <i>k</i>/<i>n</i> and <i>z</i> = 1.96 for a 95% interval.</small>`,
+ howto:"The track runs from −0.2 to 1.2. The blue bar is the Wald interval, the amber bar the Wilson interval, and any part outside 0 to 1 turns red. Push k towards n to see the Wald interval break.",
+ cam:[10,[0,1,0]],controls:[{id:"n",label:"Items checked, n",min:5,max:200,step:1,value:20},{id:"k",label:"Correct, k",min:0,max:200,step:1,value:19}],
+ predict:{q:"For 19 correct out of 20, does the Wald 95% interval stay below 1?",opts:["Yes","No, it passes 1"],right:1,why:"Wald gives [0.854, 1.046], an impossible upper limit. Wilson gives [0.764, 0.991], asymmetric and inside the range."},
+ draw(v){const n=v.n,k=Math.min(v.k,n),p=k/n,z=1.959964;const se=Math.sqrt(p*(1-p)/n);const wl=[p-z*se,p+z*se];const den=1+z*z/n,c=(p+z*z/(2*n))/den,h=z*Math.sqrt(p*(1-p)/n+z*z/(4*n*n))/den;const wi=[c-h,c+h];
+  const X=x=>-3.5+7*(x+0.2)/1.4;K.page(8,2.4);K.box({w:X(1)-X(0),h:0.02,d:1.6,x:(X(0)+X(1))/2,tone:"ghost",op:0.08});
+  const bar=(iv,y,tone)=>{const a=Math.max(iv[0],0),b=Math.min(iv[1],1);K.box({w:Math.max(0.01,X(b)-X(a)),h:0.22,d:0.5,x:(X(a)+X(b))/2,y,tone});if(iv[1]>1)K.box({w:X(iv[1])-X(1),h:0.22,d:0.5,x:(X(1)+X(iv[1]))/2,y,tone:"warn"});if(iv[0]<0)K.box({w:X(0)-X(iv[0]),h:0.22,d:0.5,x:(X(iv[0])+X(0))/2,y,tone:"warn"})};
+  bar(wl,1.2,"model");bar(wi,0.5,"data");K.ball({x:X(p),y:1.95,r:0.12,tone:"ink"});K.label("k/n = "+f(p,3),{x:X(p),y:2.3,size:0.22});
+  K.label("Wald",{x:X(Math.max(wl[0],-0.2))-0.35,y:1.31,anchor:"right",tone:"model",size:0.24});K.label("Wilson",{x:X(Math.max(wi[0],0))-0.35,y:0.61,anchor:"right",tone:"data",size:0.24});
+  K.xaxis({from:X(-0.2),to:X(1.2),z:1.0,ticks:[0,0.25,0.5,0.75,1].map(t=>[X(t),String(t)])});
+  return `<span class="k">k/n</span> ${f(p,3)}   (k = ${k}, n = ${n})\n<span class="k">Wald</span>   <span class="m">[${f(wl[0],3)}, ${f(wl[1],3)}]</span>${wl[1]>1||wl[0]<0?' <span class="w">leaves 0–1</span>':""}\n<span class="k">Wilson</span> <span class="d">[${f(wi[0],3)}, ${f(wi[1],3)}]</span>`},
+ legend:[["model","Wald"],["data","Wilson"],["warn","outside 0–1"]],
+ pitfalls:["Reporting accuracy from a small validation sample without an interval.","Reading raw agreement as reliability when one category dominates the labels."],
+ research:`<p>The hedge detector in the evidentiality study was validated against an LLM reference, with precision .682, recall .438, F1 .534 and category agreement κ = .627 on the co-detected hedges (Bozdağ, 2026a).</p>`,refs:["egca"],
+ viva:["Why report Wilson intervals for validation figures?","The Wald interval assumes a symmetric normal sampling distribution, which fails for proportions near 0 or 1 and can produce impossible limits. The Wilson interval keeps correct coverage there and never leaves the range from 0 to 1."]},
+{id:4,part:"IV",area:"Association",title:"Counts in a 2 × 2 table",blurb:"Expected counts, residuals, and why a p-value ranks evidence rather than strength.",
+ lede:"Most corpus questions about association reduce to a table of counts compared with the counts expected if the variables were unrelated.",
+ idea:`<p>Cross-classify tokens by two variables, a verb and a construction for instance, and each cell has an observed count. Under independence the expected count of a cell is its row total times its column total divided by the grand total. Pearson's χ² sums the squared standardized differences between observed and expected counts, and the standardized residual of each cell shows which cell carries the departure. The log-likelihood statistic G² compares the same counts through their log ratio; both approximations weaken when expected counts are small, and Fisher's exact test then gives an exact probability from the hypergeometric distribution.</p><p>A test answers whether there is evidence of association, and with large corpora almost any association is significant. Strength is a different question, answered by the odds ratio (ad/bc) and by ΔP, the difference between two conditional probabilities, which is directional, so that the attraction of a verb to a construction need not equal the attraction of the construction to the verb.</p>`,
+ formula:`<span class="eq"><i>E</i><sub>ij</sub> = row<sub>i</sub> × col<sub>j</sub> / <i>N</i></span> &nbsp;&nbsp; <span class="eq">residual = (<i>O</i> − <i>E</i>) / √<i>E</i></span> &nbsp;&nbsp; <span class="eq">OR = <i>ad</i>/<i>bc</i></span> &nbsp;&nbsp; <span class="eq">ΔP(C|V) = <i>a</i>/(<i>a</i>+<i>b</i>) − <i>c</i>/(<i>c</i>+<i>d</i>)</span>`,
+ howto:"Solid columns are observed counts and wire frames the expected counts, both on a square-root scale. Amber cells are above expectation, blue cells below, and the stronger the colour, the larger the residual. Change how often the verb occurs in the construction.",
+ cam:[10,[0,1,0]],controls:[{id:"a",label:"Verb in the construction, a",min:5,max:60,step:1,value:30}],
+ predict:{q:"With a = 30, which cell drives the χ² statistic?",opts:["Verb in the construction","Verb elsewhere","Other verbs in the construction","Other verbs elsewhere"],right:0,why:"Its expected count is only 5, so its standardized residual is (30 − 5)/√5 = 11.2, against −3.7, −2.6 and 0.9 for the other cells."},
+ draw(v){const a=v.a,b=20,c=70,d=880,N=a+b+c+d;const O=[a,b,c,d],R=[a+b,a+b,c+d,c+d],C=[a+c,b+d,a+c,b+d];const E=O.map((o,i)=>R[i]*C[i]/N);const res=O.map((o,i)=>(o-E[i])/Math.sqrt(E[i]));
+  const chi=res.reduce((s,r)=>s+r*r,0),g2=2*O.reduce((s,o,i)=>s+(o>0?o*Math.log(o/E[i]):0),0),or=a*d/(b*c),dp=a/(a+b)-c/(c+d);
+  K.page(6,6);const pos=[[-1.3,-1.3],[1.3,-1.3],[-1.3,1.3],[1.3,1.3]],sc=2.8/Math.sqrt(900);
+  O.forEach((o,i)=>{K.box({w:1.4,h:Math.sqrt(o)*sc,d:1.4,x:pos[i][0],z:pos[i][1],tone:res[i]>=0?"data":"model",op:Math.min(0.85,0.2+Math.abs(res[i])/12)});K.box({w:1.6,h:Math.sqrt(E[i])*sc,d:1.6,x:pos[i][0],z:pos[i][1],tone:"ghost",op:0,eop:0.5});const top=Math.max(Math.sqrt(o),Math.sqrt(E[i]))*sc;const front=pos[i][1]>0,ly=front?0.02:top+0.5,lz=front?pos[i][1]+1.05:pos[i][1];K.label(["this verb · construction","this verb · elsewhere","other verbs · construction","other verbs · elsewhere"][i],{x:pos[i][0],y:ly+0.27,z:lz,size:0.15,tone:"muted"});K.label(o+" observed, "+f(E[i],1)+" expected",{x:pos[i][0],y:ly,z:lz,size:0.17,bold:true,tone:res[i]>=0?"data":"model"})});
+  return `<span class="k">residuals</span> ${res.map(r=>f(r,1)).join("  ")}\n<span class="k">χ²</span> <span class="d">${f(chi,1)}</span>   <span class="k">G²</span> ${f(g2,1)}\n<span class="k">odds ratio</span> ${f(or,1)}   <span class="k">ΔP(C|V)</span> <span class="m">${f(dp,3)}</span>`},
+ legend:[["data","above expected"],["model","below expected"],["ghost","expected (frame)"]],
+ pitfalls:["Ranking items by p-value as if it measured strength of association.","Using χ² when several expected counts fall below about five."],
+ research:`<p>In the evidentiality study, the hedges the rule-based detector missed are unevenly distributed across first-language groups, χ²(2) = 8.49, p = .014, and the residuals locate the excess in the Bulgarian texts (Bozdağ, 2026a).</p><p>The construction-learning study measures verb–construction attraction with Fisher's exact collostructional analysis, building one 2 × 2 table for each verb and construction family (Bozdağ &amp; Mo, 2026).</p>`,refs:["egca","lingua"],
+ viva:["Why Fisher's exact test rather than χ² for collostructions?","Many verbs are rare within a construction, so expected counts are small and the asymptotic statistics become unreliable. Fisher's test is exact at any frequency, and because its p-value mixes frequency with strength, measures of strength are needed beside it."]},
+{id:5,part:"V",area:"Information",title:"Entropy and effective types",blurb:"Measuring how open a slot is, and converting bits into a number of verbs.",
+ lede:"Entropy measures how unpredictable a choice is, and two to the power of the entropy turns that measure into a number of equally likely options.",
+ idea:`<p>Shannon entropy summarizes a categorical distribution in bits. If one verb fills a slot every time, the entropy is zero. If the slot is shared evenly among <i>K</i> verbs, it is log₂ <i>K</i>. Between these limits entropy registers concentration, which a simple count of types does not: five verbs used equally often and five verbs of which one dominates have the same type count but very different entropies.</p><p>The quantity 2<sup><i>H</i></sup> is the number of equally likely types that would produce the same unpredictability, the effective number of types. It makes thresholds and differences readable. A threshold of 1.5 bits means at least about 2.8 equally likely verbs, and a difference of β bits between two groups corresponds to a ratio of 2<sup>β</sup> in effective types. Entropy computed from observed frequencies is biased downwards in small samples, because rare types are missed, so estimates from patterns with few tokens deserve caution.</p>`,
+ formula:`<span class="eq"><i>H</i> = −Σ <i>p</i><sub>k</sub> log₂ <i>p</i><sub>k</sub></span> &nbsp;&nbsp; <span class="eq">effective types = 2<sup><i>H</i></sup></span>`,
+ howto:"The amber columns are the counts of five verbs; one is set by the slider and the other four occur once each. The blue blocks show the effective number of verbs, 2^H.",
+ cam:[10,[0,1.1,0]],controls:[{id:"x",label:"Count of the leading verb",min:1,max:40,step:1,value:12}],
+ predict:{q:"Counts 12, 1, 1, 1, 1. How many effective verb types does the slot hold?",opts:["About 5","About 2.5","About 1"],right:1,why:"H = 1.31 bits and 2^H = 2.48. Five types are present, but one dominates, so the slot behaves like two and a half equally likely verbs."},
+ draw(v){const c=[v.x,1,1,1,1],T=c.reduce((s,x)=>s+x,0),p=c.map(x=>x/T);const H=-p.reduce((s,q)=>s+q*Math.log2(q),0),eff=2**H;
+  K.page(8,3);const mx=Math.max(...c);c.forEach((x,i)=>{K.box({w:0.9,h:2.6*x/mx,d:0.9,x:-3+1.5*i,z:-0.5,tone:"data"});K.label(String(x),{x:-3+1.5*i,y:2.6*x/mx+0.22,z:-0.5,size:0.22,tone:"data"});K.label("verb "+(i+1),{x:-3+1.5*i,y:0.02,z:1.75,size:0.2,tone:"muted"})});
+  const full=Math.floor(eff),part=eff-full;for(let i=0;i<Math.ceil(eff);i++){const fr=i<full?1:part;K.box({w:0.9*fr,h:0.9,d:0.9,x:-3+1.5*i-0.45*(1-fr),z:0.8,tone:"model",op:0.25})}K.label("2^H = "+f(eff,2)+" effective verbs",{x:3.6,y:0.45,z:0.8,anchor:"left",size:0.22,tone:"model"});
+  return `<span class="k">counts</span> ${c.join(", ")}\n<span class="k">H</span> <span class="d">${f(H,3)}</span> bits   <span class="k">maximum</span> ${f(Math.log2(5),3)}\n<span class="k">effective types 2^H</span> <span class="m">${f(eff,2)}</span>`},
+ legend:[["data","verb counts"],["model","effective types"]],
+ pitfalls:["Comparing type counts when the real question is how evenly types are used.","Trusting entropies from patterns with only a handful of tokens."],
+ research:`<p>The construction-learning study measures lexical diversity as entropy in bits. Pooled over verb lemmas, the transitive and voice family reaches 8.14 bits, followed by motion (6.25), resultative (4.40) and transfer (3.98), and the L1 effects are reported as 2<sup>β</sup>, so that the Arabic estimate of 0.50 bits corresponds to a 1.42 times larger effective verb inventory (Bozdağ &amp; Mo, 2026).</p><p>The Linguistic Clusters Framework uses entropy twice, as boundary entropy, where a threshold of 2.8 bits corresponds to about seven equally likely continuations, and as slot entropy, where 1.5 bits corresponds to about 2.83 equiprobable verb types (Bozdağ, 2026b).</p>`,refs:["lingua","cllt"],
+ viva:["Why report the diversity effect as 2^β?","The outcome is entropy in bits, so β is a difference in bits, and 2^β is the ratio of effective verb types, a quantity a reader can interpret directly."]},
+{id:6,part:"VI",area:"Resampling",title:"A permutation test",blurb:"Building a null distribution from the data, and what blocks and Holm do.",
+ lede:"A permutation test asks how unusual the observed result is among all the results the data could have produced if the labels meant nothing.",
+ idea:`<p>If the labels a hypothesis concerns, groups, tasks or tense categories, carried no information about the outcome, reassigning them at random would produce data sets as plausible as the observed one. Computing the statistic on many reassignments builds its null distribution from the data themselves, and the p-value is the share of reassignments at least as extreme as the observed result. The only assumption is exchangeability under the null hypothesis, which makes the method suitable for statistics without a textbook distribution.</p><p>Two refinements matter in corpus work. Labels are permuted only within strata that the null hypothesis holds fixed, such as the verb, and dependent observations, such as the tokens of one text, are moved together as blocks, so that the null distribution reproduces their correlation. When several tests form one family, the Holm procedure controls the chance of any false rejection, and with B permutations the smallest attainable p-value is 1/(B + 1).</p>`,
+ formula:`<span class="eq"><i>p</i> = (1 + #{<i>T</i>* ≥ <i>T</i><sub>obs</sub>}) / (1 + <i>B</i>)</span>`,
+ howto:"Six invented scores sit in two groups, amber and blue. Shuffle the labels once, or run all 20 ways of splitting the scores into two groups of three; the red columns are the splits at least as extreme as the observed one.",
+ cam:[10,[0,1.1,0]],controls:[],buttons:[["Shuffle once","once"],["Run all 20 splits","all"],["Reset","reset"]],
+ predict:{q:"How many of the 20 splits give a difference in means at least as large as the observed 4.67?",opts:["1","5","10"],right:0,why:"Only the observed split does, so the exact one-sided p is 1/20 = .05. With 999 random permutations the smallest possible p is 1/1,000."},
+ init(s){s.vals=[3,5,7,8,9,12];s.B=[3,4,5];s.diffs=null;s.cur=mean([8,9,12])-mean([3,5,7])},
+ act(a,v,s){const all=[];for(let i=0;i<6;i++)for(let j=i+1;j<6;j++)for(let k=j+1;k<6;k++)all.push([i,j,k]);const diff=B=>mean(B.map(i=>s.vals[i]))-mean([0,1,2,3,4,5].filter(i=>!B.includes(i)).map(i=>s.vals[i]));
+  if(a==="once")s.B=all[Math.floor(Math.random()*20)];if(a==="all")s.diffs=all.map(diff);if(a==="reset"){s.B=[3,4,5];s.diffs=null}s.cur=diff(s.B)},
+ draw(v,s){K.page(8,3.4);s.vals.forEach((x,i)=>{const inB=s.B.includes(i);const order=inB?s.B.indexOf(i):[0,1,2,3,4,5].filter(j=>!s.B.includes(j)).indexOf(i);K.ball({x:(inB?1.2:-3.4)+0.75*order,y:0.2+x*0.12,z:-1.1,r:0.16,tone:inB?"model":"data"})});
+  K.label("group A",{x:-2.65,y:2.2,z:-1.1,tone:"data",size:0.24});K.label("group B",{x:1.95,y:2.2,z:-1.1,tone:"model",size:0.24});
+  if(s.diffs){K.xaxis({from:-3.2,to:3.2,z:1.25,ticks:[-4.67,0,4.67].map(t=>[t*0.55,f(t,2)]),title:"difference B − A in each of the 20 splits"});const xs=[...new Set(s.diffs.map(d=>Math.round(d*3)/3))].sort((p,q)=>p-q);xs.forEach(x=>{const n=s.diffs.filter(d=>Math.abs(Math.round(d*3)/3-x)<1e-6).length;K.box({w:0.32,h:0.35*n,d:0.6,x:x*0.55,z:0.7,tone:x>=4.66?"warn":"ghost",op:x>=4.66?0.7:0.35})})}
+  const pv=s.diffs?s.diffs.filter(d=>d>=4.666).length/20:null;
+  return `<span class="k">this split</span> B − A = <span class="d">${f(s.cur,2)}</span>\n<span class="k">observed</span> 4.67\n<span class="k">exact p</span> <span class="m">${pv===null?"run all 20 splits":f(pv,2)+" ("+Math.round(pv*20)+" of 20)"}</span>`},
+ legend:[["data","group A"],["model","group B"],["warn","splits ≥ observed"]],
+ pitfalls:["Permuting single tokens when tokens of one writer are correlated.","Reading identical adjusted p-values as identical evidence, when they sit at the floor set by the number of permutations."],
+ research:"",refs:[],
+ viva:["Why permute blocks rather than single tokens?","Tokens of one writer and verb are correlated, so shuffling single tokens produces a null distribution that is too narrow and p-values that are too small. Moving each text's tokens as a block keeps that dependence in the null."]},
+{id:7,part:"VII",area:"Models",title:"Link functions",blurb:"Why effects are additive on the log-odds scale and not on probabilities.",
+ lede:"A regression for a probability or a count works on a transformed scale, and every coefficient must be read on that scale.",
+ idea:`<p>A generalized linear model connects the expected outcome to a linear combination of predictors through a link function. For a binary outcome the logit link uses the log of the odds, so that each coefficient is a change in log odds and its exponential is an odds ratio. Because the logistic curve is steepest at a probability of .50, the same coefficient moves a probability most near .50 and least near 0 or 1. An odds ratio is therefore the portable summary of an effect, while a change in probability holds only at a stated baseline.</p><p>Other links suit other outcomes. Counts use the log link, so that exponentiated coefficients are rate ratios, and the logarithm of the exposure enters as an offset with its coefficient fixed at 1, which turns a model of counts into a model of rates. For the probability that a text contains at least one token, the complementary log–log link with a log-length offset is the exact model of events occurring at a constant rate per word. Ordered ratings use a cumulative model with thresholds on a latent scale.</p>`,
+ formula:`<span class="eq">logit(<i>p</i>) = log(<i>p</i>/(1 − <i>p</i>)) = α + β<i>x</i></span> &nbsp;&nbsp; <span class="eq">log E[<i>y</i>] = log(exposure) + α + β<i>x</i></span>`,
+ howto:"The blue curve is the logistic function. The dark ball marks the baseline probability and the amber ball the probability after adding β on the log-odds scale; the amber bar at the right is the change in probability.",
+ cam:[10,[0,1.2,0]],controls:[{id:"p0",label:"Baseline probability",min:0.05,max:0.95,step:0.01,value:0.2},{id:"b",label:"Effect β on the log-odds scale",min:-2,max:2,step:0.05,value:0.5}],
+ predict:{q:"The same β = 0.5 is added at three baselines. Where does the probability move most?",opts:["At .10","At .50","At .90"],right:1,why:"From .50 it moves to .62, from .10 to .15 and from .90 to .94. The odds ratio is e^0.5 = 1.65 at every baseline."},
+ draw(v){const X=e=>e*0.55,Y=p=>p*2.6;const pts=[];for(let e=-6;e<=6.001;e+=0.2)pts.push([X(e),Y(sig(e)),0]);K.page(8,2.4);K.tube(pts,"model",0.035);
+  const e0=logit(v.p0),e1=e0+v.b,p1=sig(e1);K.ball({x:X(e0),y:Y(v.p0),r:0.13,tone:"ink"});K.ball({x:X(e1),y:Y(p1),r:0.14,tone:"data"});
+  K.line([[X(e0),0,0],[X(e0),Y(v.p0),0]],"ink",0.5);K.line([[X(e1),0,0],[X(e1),Y(p1),0]],"data",0.8);K.box({w:0.05,h:Math.max(0.002,Math.abs(Y(p1)-Y(v.p0))),d:0.05,x:3.6,y:Math.min(Y(p1),Y(v.p0)),tone:"data",op:0.9});
+  K.label(f(v.p0,2),{x:X(e0)-0.25,y:Y(v.p0)-0.12,anchor:"right",size:0.22});K.label(f(p1,2),{x:X(e1)+0.25,y:Y(p1)+0.16,anchor:"left",tone:"data",size:0.22});
+  K.xaxis({from:X(-6),to:X(6),z:0.6,ticks:[-6,-4,-2,0,2,4,6].map(t=>[X(t),String(t)]),title:"log odds"});K.yaxis({x:X(-6)-0.15,top:Y(1),ticks:[0,0.5,1].map(t=>[Y(t),String(t)]),title:"probability"});
+  return `<span class="k">log odds</span> ${f(e0,2)} → ${f(e1,2)}\n<span class="k">probability</span> ${f(v.p0,3)} → <span class="d">${f(p1,3)}</span>   (<span class="d">${p1>=v.p0?"+":""}${f(p1-v.p0,3)}</span>)\n<span class="k">odds ratio e^β</span> <span class="m">${f(Math.exp(v.b),2)}</span>`},
+ legend:[["model","logistic curve"],["ink","baseline"],["data","after the effect"]],
+ pitfalls:["Translating an odds ratio into a fixed change in probability.","Entering log exposure as an ordinary predictor when the question concerns rates."],
+ research:`<p>The construction-learning study models whether an essay contains a construction family with a Bernoulli model and a complementary log–log link, with centred log word count as an offset, and models frequencies with a Poisson log link and the same offset, so that the coefficients describe density per word (Bozdağ &amp; Mo, 2026).</p><p>The dative study models the choice between the double-object and prepositional dative with a logit link (Bozdağ, 2024).</p>`,refs:["lingua","dative"],
+ viva:["Why not report effects as changes in probability?","A coefficient on the log-odds scale is constant across baselines, while the change in probability it implies is not. The odds ratio is the portable summary, and probabilities are given at stated baselines when a concrete reading is needed."]},
+{id:8,part:"VIII",area:"Bayesian inference",title:"Prior, data and posterior",blurb:"How a prior and the data combine, and how the posterior is summarized.",
+ lede:"Bayesian estimation combines what is assumed before the data with what the data say, and reports the result as a full distribution.",
+ idea:`<p>The posterior is proportional to the likelihood times the prior. A weakly informative prior rules out implausible values without favouring plausible ones, and with large corpora the likelihood dominates, so that the prior matters mainly for sparse groups and for variance parameters. The weight of a prior can be read as a number of observations: a prior worth ten observations moves an estimate based on a hundred only slightly.</p><p>The posterior is summarized by its centre, an interval and, often, the probability of direction, the share of the posterior on the side of zero where its median lies. Two further summaries answer different questions. The region of practical equivalence asks whether the effect is large enough to matter, and a Bayes factor compares how well two hypotheses predicted the data, which makes it sensitive to the width of the prior. Models are estimated by Markov chain Monte Carlo, and convergence is checked with R-hat, the effective sample size and the absence of divergent transitions.</p>`,
+ formula:`<span class="eq"><i>p</i>(θ | <i>y</i>) ∝ <i>p</i>(<i>y</i> | θ) <i>p</i>(θ)</span> &nbsp;&nbsp; <span class="eq">Beta(<i>a</i>, <i>b</i>) prior + <i>k</i> of <i>n</i> → Beta(<i>a</i> + <i>k</i>, <i>b</i> + <i>n</i> − <i>k</i>)</span>`,
+ howto:"An invented verb is passivized 30 times in 100 clauses. The back curve is the prior, the middle curve the data alone, and the front curve the posterior with its 94% highest density interval shaded.",
+ cam:[10,[0,1.1,0]],controls:[{id:"m",label:"Prior mean",min:0.05,max:0.95,step:0.01,value:0.2},{id:"s",label:"Prior worth (observations)",min:2,max:300,step:1,value:10}],
+ predict:{q:"Prior mean .20 worth 10 observations; data 30 of 100. The posterior mean is about",opts:[".20",".29",".30"],right:1,why:"The posterior is Beta(32, 78), with mean .291. Make the prior worth 100 observations and the posterior mean moves halfway, to .25."},
+ draw(v){const k=30,n=100,a0=v.m*v.s,b0=(1-v.m)*v.s,a1=a0+k,b1=b0+n-k;const X=x=>-3.5+7*x;
+  const curve=(a,b,z,tone,name)=>{let mx=0,at=0;const xs=[];for(let i=1;i<200;i++){const x=i/200,y=betaPdf(x,a,b);xs.push([x,y]);if(y>mx){mx=y;at=x}}K.tube(xs.map(([x,y])=>[X(x),2.4*y/mx,z]),tone,0.03);K.label(name,{x:X(1)+0.2,y:0.12,z,tone,size:0.22,anchor:"left"})};
+  K.page(8,3);curve(Math.max(a0,0.5),Math.max(b0,0.5),-1,"ink","prior");curve(k+1,n-k+1,0,"data","data");curve(a1,b1,1,"model","posterior");K.xaxis({from:X(0),to:X(1),z:1.6,ticks:[0,0.2,0.4,0.6,0.8,1].map(t=>[X(t),String(t)]),title:"probability of the passive"});
+  const hdi=betaHDI(a1,b1,0.94);K.box({w:X(hdi[1])-X(hdi[0]),h:2.4,d:0.15,x:(X(hdi[0])+X(hdi[1]))/2,z:1,tone:"model",op:0.12,eop:0.3});
+  return `<span class="k">prior</span> Beta(${f(a0,1)}, ${f(b0,1)})\n<span class="k">posterior</span> Beta(${f(a1,1)}, ${f(b1,1)})   <span class="k">mean</span> <span class="m">${f(a1/(a1+b1),3)}</span>\n<span class="k">94% HDI</span> <span class="m">[${f(hdi[0],3)}, ${f(hdi[1],3)}]</span>   <span class="k">data alone</span> <span class="d">.300</span>`},
+ legend:[["ink","prior"],["data","data (likelihood)"],["model","posterior"]],
+ pitfalls:["Calling a result significant because it lies outside a region of practical equivalence.","Expecting the probability of direction and the Bayes factor to agree when the prior is wide."],
+ research:`<p>The dative study summarizes each coefficient by its median, 89% interval, probability of direction, share inside the region of practical equivalence and Bayes factor. The intercept, for example, is −1.0 [−1.70, −0.31] with pd = 99.03%, 2.67% inside the region and a Bayes factor of 0.274, a case in which the posterior is clearly signed while the Bayes factor reflects the width of the prior (Bozdağ, 2024).</p><p>The construction-learning models were sampled with four MCMC chains, yielding 8,000 posterior samples, and effects were judged by their 94% highest density intervals (Bozdağ &amp; Mo, 2026).</p>`,refs:["dative","lingua"],
+ viva:["Why can pd and the Bayes factor disagree?","The probability of direction depends only on the posterior, whereas the Bayes factor compares a point null with the full prior, so a wide prior spreads the alternative's predictions over implausibly large effects. A parameter can therefore be almost certainly signed while the Bayes factor is near or below 1."]},
+{id:9,part:"IX",area:"Hierarchical models",title:"Partial pooling",blurb:"How random effects borrow strength across verbs, writers and L1 groups.",
+ lede:"A hierarchical model estimates each group from its own data and from what all the groups together say about how much groups differ.",
+ idea:`<p>Corpus data are nested: tokens in texts, texts in writers, writers in first-language groups. A random intercept gives each group its own deviation from the overall mean and assumes that these deviations come from a common distribution whose standard deviation is estimated. Each group's estimate is then a weighted compromise between its own mean and the overall mean, with more weight on its own data the more observations it has and the more the groups are found to differ.</p><p>This partial pooling stabilizes sparse groups without discarding them, and it is what separates hierarchical models from both extremes, complete pooling, which ignores the groups, and no pooling, which estimates every group alone and gives extreme values for small ones. Crossed random effects separate sources that combine freely, such as learners and topics. A standard deviation estimated from very few groups is weakly identified, so conclusions are better drawn from contrasts between groups than from the size of that standard deviation alone.</p>`,
+ formula:`<span class="eq">θ̂<sub>j</sub> ≈ <i>w</i><sub>j</sub> ȳ<sub>j</sub> + (1 − <i>w</i><sub>j</sub>) μ</span> &nbsp;&nbsp; <span class="eq"><i>w</i><sub>j</sub> = <i>n</i><sub>j</sub> / (<i>n</i><sub>j</sub> + σ²<sub>within</sub> / τ²)</span>`,
+ howto:"Six invented verbs have raw passive rates from very different numbers of clauses. Amber balls are raw rates, blue balls the pooled estimates, and the blue plane is the overall rate of .30. Change τ, how much verbs are allowed to differ.",
+ cam:[10,[0,1.3,0]],controls:[{id:"t",label:"Between-verb SD τ",min:0.02,max:0.5,step:0.01,value:0.1}],
+ predict:{q:"Which verb moves furthest towards the mean?",opts:["1 of 1","3 of 4","60 of 100"],right:0,why:"With one observation its weight on its own data is about 1/22 at τ = .10, so its estimate falls from 1.00 to .33. The verb with 100 observations keeps 83% of its own rate."},
+ draw(v){const verbs=[[1,1],[3,4],[60,100],[8,40],[2,10],[25,60]],mu=0.3,s2=0.21;const X=x=>-3.5+7*x;K.page(8,4);
+  K.box({w:0.02,h:3.6,d:3.6,x:X(mu),tone:"model",op:0.08,eop:0.4});let rows="";
+  verbs.forEach(([k,n],i)=>{const raw=k/n,w=n/(n+s2/(v.t*v.t)),pp=mu+w*(raw-mu),y=0.35+i*0.55;K.ball({x:X(raw),y,r:0.12,tone:"data"});K.ball({x:X(pp),y,r:0.12,tone:"model"});K.label(k+" of "+n,{x:-3.7,y,anchor:"right",size:0.21,tone:"muted"});K.line([[X(raw),y,0],[X(pp),y,0]],"ink",0.6);rows+=`${(k+"/"+n).padEnd(7)} raw ${f(raw,2)} → <span class="m">${f(pp,2)}</span>  weight ${f(w,2)}\n`});
+  K.label("overall .30",{x:X(mu),y:3.85,tone:"model",size:0.22});K.xaxis({from:X(0),to:X(1),z:1.6,ticks:[0,0.25,0.5,0.75,1].map(t=>[X(t),String(t)]),title:"passive rate"});
+  return rows.trim()},
+ legend:[["data","raw rate"],["model","pooled estimate"]],
+ pitfalls:["Treating a variance component from four groups as precisely estimated.","Comparing variance shares between samples whose cells differ in density."],
+ research:`<p>In the evidentiality study, the L1 random-effect standard deviation for DIRECT evidentials is 0.63 [0.21, 1.27], and the paper rests its typological predictions on pairwise contrasts between L1 groups, each with its probability of direction (Bozdağ, 2026a).</p><p>The frequency model of the construction-learning study enters verbs as random effects to capture lexical idiosyncrasy (Bozdağ &amp; Mo, 2026), the dative study gives the 27 L1 subcorpora a random intercept (Bozdağ, 2024), and the passive study crosses learner and topic intercepts (Bozdağ, in press).</p>`,refs:["egca","lingua","dative","passive"],
+ viva:["Why random intercepts for both learner and topic?","Each learner writes on several topics and each topic is answered by many learners. Without the topic intercept, prompts that elicit many passives would be attributed to the learners who answered them, and without the learner intercept, one learner's preference would count as independent evidence many times."]},
+{id:10,part:"X",area:"Specialized likelihoods",title:"Zeros, counts and bounded scores",blurb:"Hurdle models for excess zeros and inflated Beta models for scores at 0 and 1.",
+ lede:"When the data contain more zeros, or more exact boundary values, than a standard distribution allows, the likelihood itself has to change.",
+ idea:`<p>Many texts contain no instance of a construction, and a single count distribution often cannot reproduce both that mass of zeros and the spread of positive counts. A hurdle model treats the outcome as two decisions. A logistic stage decides whether the count is zero, and a count stage restricted to positive values, such as a zero-truncated negative binomial, decides how large it is. Each stage has its own coefficients, so that a predictor may affect whether a construction is used and how intensively it is used to different degrees.</p><p>A score between 0 and 1, such as a proportion of distancing, suits the Beta distribution, which cannot represent values of exactly 0 or 1. If such values are few, they can be moved slightly inwards; if they are many, a zero-one-inflated Beta model treats them as separate point masses. Fitting both and comparing the conclusions shows whether the treatment of the boundaries matters.</p>`,
+ formula:`<span class="eq"><i>P</i>(<i>y</i> = 0) = 1 − π</span> &nbsp;&nbsp; <span class="eq"><i>P</i>(<i>y</i> = <i>k</i>) = π <i>f</i>(<i>k</i>) / (1 − <i>f</i>(0)), <i>k</i> ≥ 1</span><small>π is the probability of any occurrence and <i>f</i> a negative binomial with mean μ and dispersion φ.</small>`,
+ howto:"The dark column is the share of texts with no occurrence, set by π; the amber columns are the positive counts from a negative binomial with mean μ and φ = 2, with its zero removed. Watch how the expected positive count changes with μ.",
+ cam:[10,[0,1.1,0]],controls:[{id:"pi",label:"Probability of any occurrence, π",min:0.1,max:0.9,step:0.01,value:0.35},{id:"mu",label:"Underlying mean μ (φ = 2)",min:0.5,max:5,step:0.1,value:1}],
+ predict:{q:"Doubling μ from 1 to 2 multiplies the expected count among texts with an occurrence by",opts:["2","about 1.5","1"],right:1,why:"E[y | y > 0] = μ / (1 − P(0)). With φ = 2, P(0) falls from .444 to .25, so the expectation rises from 1.80 to 2.67, a factor of 1.48. Coefficients of the count stage multiply μ, not the positive-count mean."},
+ draw(v){const phi=2,p0=nbPmf(0,v.mu,phi),probs=[1-v.pi];for(let k=1;k<=9;k++)probs.push(v.pi*nbPmf(k,v.mu,phi)/(1-p0));K.page(8,2.6);const mx=Math.max(...probs);
+  probs.forEach((p,k)=>{K.box({w:0.6,h:2.6*p/mx,d:0.9,x:-3.4+0.75*k,tone:k?"data":"ink",op:k?0.55:0.25});if(p>0.06)K.label(f(p,2),{x:-3.4+0.75*k,y:2.6*p/mx+0.2,size:0.18,tone:k?"data":"ink"})});
+  K.xaxis({from:-3.75,to:3.35,z:0.9,ticks:[0,1,2,3,4,5,6,7,8,9].map(k=>[-3.4+0.75*k,String(k)]),title:"occurrences in a text"});const ep=v.mu/(1-p0);
+  return `<span class="k">P(y = 0)</span> ${f(1-v.pi,3)}\n<span class="k">E[y | y > 0]</span> <span class="d">${f(ep,2)}</span>   <span class="k">NB P(0)</span> ${f(p0,3)}\n<span class="k">overall mean</span> <span class="m">${f(v.pi*ep,2)}</span>`},
+ legend:[["ink","zeros (selection)"],["data","positive counts (intensity)"]],
+ pitfalls:["Reading a count-stage coefficient as a fixed multiplier of the expected positive count.","Forcing many boundary values into a Beta model without checking a model that represents them."],
+ research:`<p>The evidentiality study models propositional distancing with a hierarchical Beta regression and re-estimates it as a zero-or-one-inflated Beta model as a sensitivity analysis; the L1 contrasts of the two models agree to within 0.004 (Bozdağ, 2026a).</p><p>The passive study uses a two-stage hurdle model, a logistic stage for whether a text contains an eventive passive and a zero-truncated negative binomial for how many, over 84,591 texts of which 64.9% contain none (Bozdağ, in press).</p>`,refs:["egca","passive"],
+ viva:["Why a hurdle model rather than one count model?","Most texts contain no instance, and whether a writer uses the construction and how intensively may depend on different factors. The hurdle estimates both with separate coefficients, which is the question the study asks."]},
+{id:11,part:"XI",area:"Model checking",title:"Checking and comparing models",blurb:"Posterior predictive checks, Bayesian R² and leave-one-out comparison.",
+ lede:"A fitted model is checked against the data it should reproduce and compared with alternatives on how well it predicts new observations.",
+ idea:`<p>A posterior predictive check simulates new data sets from the fitted model and compares a summary of the observed data, such as the share of zeros, with its distribution across the simulations. A model that passes reproduces that feature; it does not thereby reproduce every feature. Bayesian R² is computed for each posterior draw as the variance of the fitted expected values divided by that variance plus the residual variance, so that it comes with an interval, and a model without predictors must return 0.</p><p>Predictive accuracy is estimated by leave-one-out cross-validation, approximated from a single fit by Pareto-smoothed importance sampling. Two models fitted to the same observations are compared through the difference in their expected log predictive density and the standard error of that difference; a difference below about 4, or below about twice its standard error, is too small to favour either model. Each report should say which model was subtracted from which.</p>`,
+ formula:`<span class="eq"><i>R</i>² = Var(μ̂) / (Var(μ̂) + mean residual variance)</span> &nbsp;&nbsp; <span class="eq">Δelpd ± SE(Δ)</span>`,
+ howto:"Forty invented observations receive fitted probabilities spread around .50; each column is one fitted value. Set the spread to zero to see a model without predictors.",
+ cam:[10,[0,1.1,0]],controls:[{id:"s",label:"Spread of fitted probabilities",min:0,max:0.45,step:0.01,value:0.2}],
+ predict:{q:"With the spread at zero, a model without predictors, Bayesian R² must be",opts:["0","about .25","equal to the base rate"],right:0,why:"All fitted values are equal, so their variance is zero and R² is 0. This is the null check that any implementation of the statistic should pass."},
+ draw(v){const n=40,mu=[];for(let i=0;i<n;i++)mu.push(0.5+v.s*(2*i/(n-1)-1));const m=mean(mu),vf=mu.reduce((s,x)=>s+(x-m)**2,0)/n,vr=mean(mu.map(x=>x*(1-x))),r2=vf/(vf+vr||1);
+  K.page(8,2.4);mu.forEach((p,i)=>K.box({w:0.12,h:2.6*p,d:0.4,x:-3.4+6.8*i/(n-1),tone:"model",op:0.45}));K.box({w:7,h:0.01,d:0.8,y:2.6*0.5,tone:"ink",op:0.08,eop:0.5});K.label("0.50",{x:3.65,y:1.3,anchor:"left",size:0.22});K.yaxis({x:-3.75,top:2.6,ticks:[0,0.5,1].map(t=>[2.6*t,String(t)]),title:"fitted probability"});K.label("40 observations",{x:0,y:0.02,z:0.75,size:0.22,tone:"muted"});
+  return `<span class="k">variance of fitted values</span> ${f(vf,4)}\n<span class="k">mean residual variance</span> ${f(vr,4)}\n<span class="k">Bayesian R²</span> <span class="m">${f(r2,3)}</span>`},
+ legend:[["model","fitted probability"],["ink","0.50"]],
+ pitfalls:["Computing R² on simulated outcomes instead of expected values, which gives a positive value to a model without predictors.","Citing an elpd difference without stating which model was subtracted from which."],
+ research:`<p>In the evidentiality study, PSIS-LOO favours the model that adds covariates for lexical diversity, syntactic complexity and L2 exposure to the distancing regression, by about nine elpd points with a standard error of 3.5, and the distancing gap between L2 and native writers survives that adjustment (Bozdağ, 2026a).</p><p>The construction-learning study used posterior predictive checks to confirm that its Poisson frequency model was adequate, with an overdispersion parameter near zero (Bozdağ &amp; Mo, 2026).</p>`,refs:["egca","lingua"],
+ viva:["Does a better elpd prove the model is right?","It shows that the model predicts held-out observations better than its alternative. Whether its structure is the true one is a separate question, answered by the theory that motivates it and by checks of the features the model should reproduce."]},
+{id:12,part:"XII",area:"Robustness",title:"Selection, confounding and cross-fitting",blurb:"How conditioning on the wrong variable creates associations, and how to avoid circularity.",
+ lede:"An association in observational data can be produced by how the data were selected or by how a predictor was built.",
+ idea:`<p>A collider is a variable caused by two others. Selecting or conditioning on it creates an association between its causes even when they are independent, because among the selected cases a low value on one cause must be offset by a high value on the other. In corpus work the typical cases are samples selected on a property the outcome influences and predictors derived from the outcome itself.</p><p>A predictor estimated from the same texts as the outcome contains part of that outcome. Cross-fitting removes this circularity by dividing the texts into folds and computing the predictor for each fold only from the other folds, so that no text contributes to the measure that predicts it. Adjusting for covariates, refitting under alternative specifications and stating which analyses were fixed in advance complete the defence against associations that the design rather than the language produced.</p>`,
+ formula:`<span class="eq">accuracy → selected ← familiarity</span><small>Conditioning on “selected” makes accuracy and familiarity correlated among the selected essays.</small>`,
+ howto:"Each point is an invented essay with two independent traits. An essay is selected when the two together exceed the threshold. Show only the selected essays and compare the correlations.",
+ cam:[10,[0,1.3,0]],controls:[{id:"cut",label:"Selection threshold",min:-1,max:2,step:0.05,value:1}],toggles:[["cond","Show only the selected essays",true]],
+ predict:{q:"Among the selected essays, accuracy and familiarity are",opts:["positively correlated","uncorrelated","negatively correlated"],right:2,why:"Selection is caused by both traits, so among selected essays a low value on one is offset by a high value on the other, and a negative correlation appears that the population does not have."},
+ draw(v){const {x,y}=SCATTER;const sel=x.map((xi,i)=>xi+y[i]>v.cut);const xs=x.filter((_,i)=>sel[i]),ys=y.filter((_,i)=>sel[i]);K.page(7,7);
+  x.forEach((xi,i)=>{if(!v.cond||sel[i])K.ball({x:xi*1.1,y:0.08,z:-y[i]*1.1,r:0.05,tone:sel[i]?"data":"ghost",op:sel[i]?0.9:0.35})});
+  const lp=[];for(let a=-3.2;a<=3.2;a+=0.1){const b=v.cut-a;if(Math.abs(b)<=3.2)lp.push([a*1.1,0.03,-b*1.1])}if(lp.length>1)K.line(lp,"warn",0.8);
+  K.label("accuracy →",{x:0,y:0.02,z:3.85,size:0.24,tone:"muted"});K.label("familiarity →",{x:-3.85,y:0.02,z:0,anchor:"right",size:0.24,tone:"muted"});if(lp.length>1)K.label("selection threshold",{x:lp[0][0],y:0.35,z:lp[0][2],tone:"warn",size:0.22});
+  return `<span class="k">all essays</span> r = ${f(corr(x,y),2)} (n = ${x.length})\n<span class="k">selected</span>   r = <span class="w">${xs.length>2?f(corr(xs,ys),2):"too few"}</span> (n = ${xs.length})`},
+ legend:[["data","selected"],["ghost","not selected"]],
+ pitfalls:["Adding a covariate that the outcome itself influences.","Estimating a predictor and the outcome from the same texts without cross-fitting."],
+ research:`<p>The passive study computes the learner verb preference under five-fold cross-fitting, so that each text's predictors derive from the other folds and no text contributes to the measure predicting it (Bozdağ, in press).</p><p>In the evidentiality study, the distancing gap between L2 and native writers survives adjustment for standardized covariates of lexical diversity, syntactic complexity and L2 exposure (Bozdağ, 2026a).</p>`,refs:["passive","egca"],
+ viva:["Is a predictor estimated from the same corpus not circular?","It would be without cross-fitting. When each text's predictor is computed only from other folds, no text contributes to its own predictor, and grouping the folds by writer or topic extends that protection to dependence through the same person or prompt."]},
+{id:13,part:"XIII",area:"Overview",title:"Methods across the papers",blurb:"Which paper uses which methods, with its publication status.",
+ lede:"Each spine on the shelf is one paper. Select a paper to bring its spine forward and read the methods it uses.",
+ idea:`<p>The lessons above isolate one method at a time. In the papers the methods combine: a validation step establishes that the counts can be trusted, a descriptive layer summarizes rates and diversity, and a model, usually Bayesian and hierarchical, carries the inference. The shelf gives the combination for each paper, with its publication status.</p>`,
+ formula:"",howto:"Choose a paper below the drawing; its spine moves forward and its methods appear in the panel.",
+ cam:[10,[0,1.3,0]],controls:[],shelf:true,
+ predict:{q:"Which paper separates whether a text contains a construction from how often it does?",opts:["The passive study","The dative study","The Linguistic Clusters Framework"],right:0,why:"The passive study uses a hurdle model, with a logistic stage for whether a text contains an eventive passive and a zero-truncated negative binomial stage for how many it contains."},
+ init(s){s.pick=0},act(a,v,s){s.pick=Number(a)},
+ draw(v,s){K.page(9,2.4);PAPERS.forEach((p,i)=>{const on=i===s.pick;K.box({w:0.8,h:on?2.7:2.2,d:1.4,x:-3.6+1.2*i,z:on?0.5:0,tone:on?"data":"ghost",op:on?0.6:0.18});K.label(({lingua:"Lingua",egca:"CUJHSS",cllt:"CLLT",dative:"TAPSLA",passive:"L&C"})[p[0]],{x:-3.6+1.2*i,y:(on?2.7:2.2)+0.25,z:on?0.5:0,size:0.19,tone:on?"data":"muted",bold:on})});
+  const p=PAPERS[s.pick],r=REFS[p[0]];return `<b>${p[1]}</b>\n${STATUS[r.st][1]}, ${r.key}\n${p[2]}`},
+ legend:[["data","selected paper"]],
+ pitfalls:[],research:`<p>The full references, with their status, are listed on the cover page of this book.</p>`,refs:[],
+ viva:["What do the papers share methodologically?","Each establishes the reliability of its counts first, describes them with measures suited to their distribution, and draws inference from models that respect the nesting of tokens in texts and writers."]},
+{id:14,part:"XIV",area:"Reproducibility",title:"Where a number comes from",blurb:"Recognizing counts calculated back from percentages, and checking numbers against outputs.",
+ lede:"A number in a paper is trustworthy when a file written by the analysis holds it, not when other documents agree with it.",
+ idea:`<p>Agreement between a manuscript, a response letter and a figure shows consistency, which numbers copied from one another also have. Provenance is stronger: the number exists in an output file of the analysis, under a label that names the quantity the sentence describes.</p><p>One pattern illustrates the difference. Counts that were really counted produce irregular shares. Counts obtained by multiplying round percentages by the total reproduce those percentages exactly, sum to the total after a small adjustment, and so pass every arithmetic check by construction. Only a recount from the data rows can tell the two apart. The same caution applies to values copied from tables that round them for display and to table columns whose labels change between drafts while the numbers stay the same.</p>`,
+ formula:`<span class="eq">share<sub>i</sub> = 100 × <i>c</i><sub>i</sub> / <i>N</i></span><small>Shares that lie within 0.005 points of a one-decimal value in every category suggest counts derived from percentages.</small>`,
+ howto:"Each segment of the bar is one category's share. A red marker appears above a share that lies within 0.005 points of a one-decimal value. Load the two examples or type your own counts.",
+ cam:[10,[0,0.9,0]],controls:[],counts:true,
+ predict:{q:"Four counts sum to the total and reproduce the printed percentages. Are they verified?",opts:["Yes, the arithmetic checks pass","No, only a recount from the data rows can show that"],right:1,why:"Counts derived from percentages pass both checks by construction. The second example, built from 47.6, 26.1, 13.7 and 12.6, puts every share on its round value; the first, counted, does not."},
+ init(s){s.c=[4013,2201,1155,1068]},act(a,v,s){if(a==="counted")s.c=[4013,2201,1155,1068];if(a==="back")s.c=[4016,2202,1156,1063]},
+ draw(v,s){const c=s.c.filter(x=>x>0),T=c.reduce((p,q)=>p+q,0);K.page(8,2);let x=-3.5,rows="",flags=0;const tones=["data","model","ink","warn"];
+  c.forEach((n,i)=>{const sh=100*n/T,w=7*n/T,onr=Math.abs(sh-Math.round(sh*10)/10)<0.0055;if(onr)flags++;K.box({w:w*0.98,h:0.5,d:0.8,x:x+w/2,tone:tones[i%4],op:0.35});if(onr)K.ball({x:x+w/2,y:0.9,r:0.11,tone:"warn"});K.label(f(sh,3)+"%",{x:x+w/2,y:onr?1.25:0.85,size:0.2,tone:onr?"warn":"ink"});x+=w;rows+=`${fi(n).padStart(7)}  ${f(sh,3)}%${onr?' <span class="w">on a round value</span>':""}\n`});
+  return rows+`<span class="k">total</span> ${fi(T)}   ${flags===c.length&&c.length>1?'<span class="w">every share sits on a round percentage, so recount from the data</span>':'<span class="d">shares are irregular, as counted data are</span>'}`},
+ legend:[["warn","share on a round value"]],
+ pitfalls:["Treating agreement between documents as verification.","Copying a value from a display table instead of computing it from the stored results."],
+ research:`<p>The analysis pipelines behind the papers are openly available; the Linguistic Clusters Framework, for instance, releases its complete analytical pipeline, including the scripts for metric computation, validation and statistical testing (Bozdağ, 2026b). In current work, every number in a manuscript is checked automatically against the output files of the pipeline before submission.</p>`,refs:["cllt"],
+ viva:["How is it established that the numbers in the tables are correct?","Every value is read from the output files of the analysis pipeline, tables are generated rather than typed, and before submission each number in the manuscript is checked against those files, with derived values listed with their formulas."]}
+];
+
+/* ---------- views ---------- */
+const store={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let done=store.get("smr-done",{});
+function renderToc(cur){document.getElementById("toc").innerHTML=L.map(l=>`<li><a href="#lesson-${l.id}"${l.id===cur?' aria-current="page"':""}><small>${l.part}</small><span>${l.title}</span><span class="dot${done[l.id]?" on":""}"></span></a></li>`).join("")}
+function showAbout(){
+  renderToc(0);if(gl&&gl.ro)gl.ro.disconnect();
+  const order=["lingua","cllt","egca","dative","passive"];
+  document.getElementById("view").innerHTML=`
+  <div class="cover-hero"><div>
+   <div class="eyebrow">An interactive companion</div><h1>Statistical Methods in Learner Corpus Research</h1>
+   <p class="author">Fatih Ünal Bozdağ · Osmaniye Korkut Ata University · <a href="https://orcid.org/0000-0002-9959-4704" target="_blank" rel="noopener">ORCID 0000-0002-9959-4704</a></p>
+   <p class="lede">Fourteen lessons on the statistical methods behind my research on learner corpora and construction grammar, from rates and their denominators to hierarchical Bayesian models.</p>
+  </div><div class="stage" id="stage"><span class="hint">drag to turn the drawing</span></div></div>
+  <div class="prose"><p>Each lesson explains one method from first principles, lets the reader test it on a small invented example drawn in three dimensions, and then shows where the method appears in my papers, with the figures quoted from their published or accepted versions. The lessons build on one another, but each can be read on its own.</p></div>
+  <h2>The studies within applied linguistics</h2><div class="prose"><p>Applied linguistics investigates language as it is learned and used, and second language acquisition and learner corpus research are among its central fields. The papers drawn on in this book belong to that tradition. Each examines the written English of learners, mostly in large learner corpora such as the International Corpus of Learner English and the EF-Cambridge Open Language Database, and asks how a grammatical construction is acquired and used in a second language.</p><p>Three questions recur across the studies. The first concerns cross-linguistic influence, that is, the extent to which the first language shapes the use of argument structure constructions, the dative alternation and the expression of evidential meaning through hedging. The second concerns the input, in particular whether the verb preferences of native writers predict the verbs that learners use in the passive. The third is methodological and concerns how formulaic patterns in learner production can be identified reliably, a problem that the Linguistic Clusters Framework addresses for the passive.</p><p>Because learner corpora contain thousands of texts by writers who differ in first language, proficiency and task, these questions require statistical methods that respect the structure of the data. Accordingly, each lesson presents one such method and shows how it is applied in the papers.</p></div>
+  <div class="steps"><div><b>Read</b>The idea, its formula and the mistakes it guards against.</div><div><b>Predict and test</b>Commit to an answer, explore the diagram, then lift the flap.</div><div><b>Connect</b>See how the method is used in published work, with full references.</div></div>
+  <h2>Lessons</h2><div class="index">${L.map(l=>`<a href="#lesson-${l.id}"><small>${l.part} · ${l.area}</small><b>${l.title}</b><span>${l.blurb}</span></a>`).join("")}</div>
+  <h2>Papers referred to</h2><ul class="refs">${order.map(k=>{const r=REFS[k],s=STATUS[r.st];return `<li><span class="cite"><span class="status ${s[0]}">${s[1]}</span></span> ${r.apa}</li>`}).join("")}</ul>`;
+  const stage=document.getElementById("stage");mount(stage);clearRoot();
+  if(gl){K.cam(10.5,[0,1.1,0]);gl.theta=-0.5;gl.phi=1.1;K.page(8,3);const r=rng(3);for(let i=0;i<9;i++){const h=0.4+2.2*Math.abs(Math.sin(i*1.7+0.4));K.box({w:0.5,h,d:0.9,x:-3.2+0.8*i,z:-0.3,tone:i%3===0?"model":"data",op:0.45})}
+   const pts=[];for(let e=-6;e<=6.001;e+=0.25)pts.push([e*0.55,2.6*sig(e),0.9]);K.tube(pts,"model",0.03)}
+  window.scrollTo({top:0,behavior:reduced?"auto":"smooth"});
+}
+const S={};
+function show(id){
+  const l=L.find(x=>x.id===id);if(!l)return showAbout();renderToc(l.id);
+  const st=S[l.id]||(S[l.id]={});if(l.init&&!st._init){l.init(st);st._init=true}
+  const vals={};(l.controls||[]).forEach(c=>vals[c.id]=st[c.id]??c.value);(l.toggles||[]).forEach(t=>vals[t[0]]=st[t[0]]??t[2]);
+  const ctl=(l.controls||[]).map(c=>`<div class="ctl"><label for="c-${l.id}-${c.id}">${c.label}<output id="o-${l.id}-${c.id}">${vals[c.id]}</output></label><input type="range" id="c-${l.id}-${c.id}" min="${c.min}" max="${c.max}" step="${c.step}" value="${vals[c.id]}"></div>`).join("");
+  const btn=(l.buttons||[]).map(b=>`<button class="btn" data-act="${b[1]}">${b[0]}</button>`).join("");
+  const tog=(l.toggles||[]).map(t=>`<label class="check"><input type="checkbox" id="t-${l.id}-${t[0]}" ${vals[t[0]]?"checked":""}> ${t[1]}</label>`).join("");
+  const shelf=l.shelf?`<div class="shelfbtns">${PAPERS.map((p,i)=>`<button class="btn${i===(st.pick||0)?" primary":""}" data-act="${i}">${REFS[p[0]].key}</button>`).join("")}</div>`:"";
+  const counts=l.counts?`<div class="num-in">${[0,1,2,3,4].map(i=>`<input inputmode="numeric" id="n-${i}" aria-label="Count ${i+1}" value="${st.c[i]??""}">`).join("")}</div><div class="btnrow"><button class="btn" data-act="counted">Counted example</button><button class="btn" data-act="back">Back-calculated example</button></div>`:"";
+  const leg=(l.legend||[]).map(([t,n])=>`<span><i style="background:var(--${t==="ghost"?"muted":t})"></i>${n}</span>`).join("");
+  const pr=l.predict,ans=st.ans;
+  document.getElementById("view").innerHTML=`
+   <div class="eyebrow">Lesson ${l.id} of 14 · ${l.area}</div><h1>${l.title}</h1>
+   <p class="lede">${l.lede}</p>
+   <div class="prose">${l.idea}</div>${l.formula?`<div class="formula">${l.formula}</div>`:""}
+   <div class="desk"><div><div class="stage" id="stage"><span class="hint">drag to turn the drawing</span></div><p class="howto" style="margin-top:8px">${l.howto}</p></div>
+    <div class="bench"><div class="controls">${ctl}${tog}${shelf}${counts}${btn?`<div class="btnrow">${btn}</div>`:""}</div>
+     <div class="readout" id="readout"></div><div class="legend">${leg}</div></div></div>
+   <div class="cards">
+    <section class="card"><h3>Predict, then test</h3><p>${pr.q}</p><div class="opts">${pr.opts.map((o,i)=>`<button class="opt${st.revealed&&i===pr.right?" right":""}" data-opt="${i}" aria-pressed="${ans===i}">${o}</button>`).join("")}</div>
+     <div class="flap${st.revealed?" open":""}" id="flap"><div class="under"><p>${pr.why}</p></div><button class="cover" id="cover" ${ans===undefined?"disabled":""}>${ans===undefined?"Choose an answer, then lift the flap":"Lift the flap"}</button></div>
+     ${l.pitfalls.length?`<h3 style="margin-top:18px">Common pitfalls</h3><ul class="pit">${l.pitfalls.map(p=>`<li>${p}</li>`).join("")}</ul>`:""}</section>
+    <section class="card">${l.research?`<h3>In my research</h3><div class="research">${l.research}</div>${l.refs.map(refLine).join("")}`:""}
+     <h3 style="margin-top:18px">Reviewer questions</h3><details class="viva"><summary>${l.viva[0]}</summary><p>${l.viva[1]}</p></details></section>
+   </div>
+   <div class="pager">${l.id>1?`<a class="btn" href="#lesson-${l.id-1}">← ${L[l.id-2].title}</a>`:`<a class="btn" href="#about">← About this book</a>`}${l.id<14?`<a class="btn primary" href="#lesson-${l.id+1}">${L[l.id].title} →</a>`:`<a class="btn primary" href="#about">Back to the cover</a>`}</div>`;
+  const stage=document.getElementById("stage");mount(stage);if(gl){gl.theta=-0.38;gl.phi=1.08;K.cam(...l.cam)}
+  const redraw=()=>{clearRoot();document.getElementById("readout").innerHTML=l.draw(vals,st).replace(/\n/g,"<br>")};
+  (l.controls||[]).forEach(c=>{const el=document.getElementById(`c-${l.id}-${c.id}`);el.addEventListener("input",()=>{const v=Number(el.value);vals[c.id]=v;st[c.id]=v;document.getElementById(`o-${l.id}-${c.id}`).textContent=v;if(l.onchange)l.onchange(c.id,st);redraw()})});
+  (l.toggles||[]).forEach(t=>{const el=document.getElementById(`t-${l.id}-${t[0]}`);el.addEventListener("change",()=>{vals[t[0]]=el.checked;st[t[0]]=el.checked;redraw()})});
+  document.querySelectorAll("[data-act]").forEach(b=>b.addEventListener("click",()=>{l.act(b.dataset.act,vals,st);if(l.shelf)document.querySelectorAll(".shelfbtns .btn").forEach((x,i)=>x.classList.toggle("primary",i===st.pick));if(l.counts)[0,1,2,3,4].forEach(i=>document.getElementById("n-"+i).value=st.c[i]??"");redraw()}));
+  if(l.counts)[0,1,2,3,4].forEach(i=>document.getElementById("n-"+i).addEventListener("input",e=>{const v=parseInt(e.target.value.replace(/[^0-9]/g,""),10);st.c[i]=isNaN(v)?0:v;redraw()}));
+  document.querySelectorAll("[data-opt]").forEach(b=>b.addEventListener("click",()=>{st.ans=Number(b.dataset.opt);document.querySelectorAll("[data-opt]").forEach(x=>x.setAttribute("aria-pressed",String(Number(x.dataset.opt)===st.ans)));const cv=document.getElementById("cover");cv.disabled=false;cv.textContent="Lift the flap"}));
+  document.getElementById("cover").addEventListener("click",()=>{if(st.ans===undefined)return;st.revealed=true;document.getElementById("flap").classList.add("open");document.querySelectorAll("[data-opt]").forEach(x=>{if(Number(x.dataset.opt)===pr.right)x.classList.add("right")});done[l.id]=true;store.set("smr-done",done);renderToc(l.id)});
+  redraw();K.fit();window.scrollTo({top:0,behavior:reduced?"auto":"smooth"});
+}
+function route(){const m=/^#lesson-(\d+)$/.exec(location.hash||"");if(m)show(Number(m[1]));else showAbout()}
+initGL();
+window.addEventListener("hashchange",route);
+const mq=window.matchMedia("(prefers-color-scheme: dark)");if(mq.addEventListener)mq.addEventListener("change",route);
+new MutationObserver(route).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+route();
+
+</script>
+
+</body></html>
