@@ -58,7 +58,7 @@ I teach discourse analysis, translation technology (CAT tools), medical and lega
 :::
 
 ::: {.pub}
-[Bozdağ, F. Ü.]{.me} (2026). Modeling distributional stability in learner English passives: The Linguistic Clusters Framework. *Corpus Linguistics and Linguistic Theory*, *23*(3). [[doi](https://doi.org/10.1515/cllt-2025-0141) [pdf](files/papers/bozdag-2026-cllt-linguistic-clusters.pdf) [code](https://github.com/fatihbozdag/linguistic_clusters) [data](https://osf.io/kq7gv/)]{.links} [SSCI · open access]{.tag}
+[Bozdağ, F. Ü.]{.me} (2026). Modeling distributional stability in learner English passives: The Linguistic Clusters Framework. *Corpus Linguistics and Linguistic Theory*. Advance online publication. [[doi](https://doi.org/10.1515/cllt-2025-0141) [pdf](files/papers/bozdag-2026-cllt-linguistic-clusters.pdf) [code](https://github.com/fatihbozdag/linguistic_clusters) [data](https://osf.io/kq7gv/)]{.links} [SSCI · open access]{.tag}
 :::
 
 ::: {.pub}
