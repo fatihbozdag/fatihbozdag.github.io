@@ -36,12 +36,28 @@ website:
       - text: "Türkçe"
         href: tr/index.qmd
     right:
-      - icon: github
-        href: https://github.com/fatihbozdag
-        aria-label: GitHub
-      - icon: envelope
-        href: mailto:fatihbozdag@osmaniye.edu.tr
-        aria-label: Email
+      - text: "Profiles"
+        icon: link-45deg
+        menu:
+          - text: "GitHub"
+            icon: github
+            href: https://github.com/fatihbozdag
+          - text: "OSF"
+            icon: archive
+            href: https://osf.io/vz746/
+          - text: "ORCID"
+            icon: person-badge
+            href: https://orcid.org/0000-0002-9959-4704
+          - text: "Google Scholar"
+            icon: mortarboard
+            href: https://scholar.google.com/citations?user=W_xdrwwAAAAJ
+          - text: "YÖK Akademik"
+            icon: building
+            href: https://akademik.yok.gov.tr/AkademikArama/
+          - text: "---"
+          - text: "Email"
+            icon: envelope
+            href: mailto:fatihbozdag@osmaniye.edu.tr
   page-footer:
     left: "© 2026 Fatih Ünal Bozdağ · Osmaniye Korkut Ata University"
     right:
