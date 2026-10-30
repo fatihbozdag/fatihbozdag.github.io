@@ -34,6 +34,8 @@ website:
         href: tools.qmd
       - text: "Teaching"
         href: teaching.qmd
+      - text: "Statistics"
+        href: /stats/
       - text: "Türkçe"
         href: tr/index.qmd
     right:
