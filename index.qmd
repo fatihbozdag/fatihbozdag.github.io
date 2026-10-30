@@ -45,6 +45,10 @@ Three threads run through my research:
 
 I teach discourse analysis, translation technology (CAT tools), medical and legal translation, and academic writing in the English Translation and Interpretation programme.
 
+## Research within applied linguistics
+
+My work belongs to applied linguistics, the field concerned with language as it is learned, taught and used, and it draws on several complementary theoretical frameworks rather than on a single method. Usage-based linguistics and Construction Grammar provide its account of acquisition, in which grammatical knowledge emerges from repeated experience with form–meaning pairings and remains sensitive to their frequency and distribution. Cognitive Grammar supplies the semantic analysis of aspect, locative constructions and the grammaticalisation of motion and posture verbs, both in Turkish and in the English of Turkish learners. Second language acquisition research frames the questions of cross-linguistic influence, constructional transfer and developmental change, whereas learner corpus research and Bayesian modelling make it possible to test them on large samples of authentic learner writing. Furthermore, the findings bear on language teaching, since they show which constructions, verbs and functions learners from particular first languages underuse or extend, and they inform my own teaching of grammar, academic writing and translation.
+
 ## Education
 
 - **PhD**, English Language Teaching, Çukurova University, 2019. Dissertation: *Error mapping and remedial intervention regarding English tense–aspect structures of Turkish EFL learners* (supervisor: Cem Can).

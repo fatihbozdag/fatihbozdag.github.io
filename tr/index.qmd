@@ -45,6 +45,10 @@ Derlem dilbilimi, Bilişsel Dilbilim ve doğal dil işlemenin kesişiminde çal�
 
 Bölümde söylem çözümlemesi, bilgisayar destekli çeviri, tıp ve hukuk çevirisi, yerelleştirme ve toplum çevirmenliği dersleri veriyorum.
 
+## Uygulamalı dilbilim içindeki yeri
+
+Çalışmalarım, dilin nasıl öğrenildiği, öğretildiği ve kullanıldığıyla ilgilenen uygulamalı dilbilim alanında yer alır ve tek bir yönteme değil, birbirini tamamlayan birkaç kuramsal çerçeveye dayanır. Kullanım temelli dilbilim ve Yapı Dilbilgisi, dilbilgisel bilginin biçim–anlam eşleşmeleriyle yinelenen deneyimden doğduğu ve bu eşleşmelerin sıklığına ve dağılımına duyarlı kaldığı bir edinim açıklaması sunar. Bilişsel Dilbilgisi ise hem Türkçede hem de İngilizce öğrenen Türk öğrenicilerin dilinde görünüşün, konum yapılarının ve hareket ile duruş fiillerinin gramatikleşmesinin anlamsal çözümlemesine çerçeve oluşturur. İkinci dil edinimi araştırmaları diller arası etki, yapısal aktarım ve gelişimsel değişim sorularını belirlerken öğrenici derlemi araştırmaları ve Bayesçi modelleme bu soruların geniş ve özgün öğrenici metinleri üzerinde sınanmasını olanaklı kılar. Ayrıca bulgular, belirli ana dillerden gelen öğrenicilerin hangi yapıları, fiilleri ve işlevleri az kullandığını ya da genişlettiğini göstererek dil öğretimine katkı sağlar ve kendi derslerimde dilbilgisi, akademik yazma ve çeviri öğretimine yön verir.
+
 ## Öğrenim
 
 - Doktora, İngiliz Dili Eğitimi, Çukurova Üniversitesi (2019)
