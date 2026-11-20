@@ -88,6 +88,7 @@ format:
     include-in-header:
       - text: |
           <meta name="author" content="Fatih Ünal Bozdağ">
+          <script data-goatcounter="https://fatihbozdag.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
     include-before-body:
       - text: |
           <a class="skip-link" href="#quarto-document-content">Skip to content</a>
