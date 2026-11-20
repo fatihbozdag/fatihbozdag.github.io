@@ -35,7 +35,7 @@ Osmaniye Korkut Ata Üniversitesi, Türkiye
 :::
 
 ::: {}
-Derlem dilbilimi, Bilişsel Dilbilim ve doğal dil işlemenin kesişiminde çalışıyorum. Araştırmalarımın ana sorusu, İngilizce öğrenenlerin dilbilgisel bilgiyi kullanımdan nasıl inşa ettiği ve ana dillerinin bu süreci nasıl biçimlendirdiğidir. Bu soruya büyük öğrenici derlemleri (ICLE, EFCAMDAT, TICLE), yapı dilbilgisine dayalı betimlemeler ve olasılıksal/Bayesçi modellerle yaklaşıyorum.
+Derlem dilbilimi, Bilişsel Dilbilim ve doğal dil işlemenin kesişiminde çalışıyorum. Araştırmalarımın ana sorusu, İngilizce öğrenenlerin dilbilgisel bilgiyi kullanımdan nasıl inşa ettiği ve ana dillerinin bu süreci nasıl biçimlendirdiğidir. Bu soruya büyük öğrenici derlemleri (ICLE, EFCAMDAT, TICLE), yapı dilbilgisine dayalı betimlemeler ve olasılıksal/Bayesçi modellerle yaklaşıyorum. Bunun yanı sıra Türkçe dilbilgisini, özellikle görünüşü ve konum yapılarını, Bilişsel Dilbilgisi çerçevesinde çözümlüyorum.
 
 Üç ana çalışma alanı:
 
