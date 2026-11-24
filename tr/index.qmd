@@ -58,7 +58,7 @@ Bölümde söylem çözümlemesi, bilgisayar destekli çeviri, tıp ve hukuk çe
 ## Son çalışmalardan seçmeler
 
 ::: {.pub}
-[Bozdağ, F. Ü.]{.me} (in press). Native and learner verb preferences as predictors of passive use in L2 English writing. *Language and Cognition*. [[doi](https://doi.org/10.1017/langcog.2026.10131) [data](https://osf.io/zt9md/)]{.links} [SSCI · in press]{.tag}
+[Bozdağ, F. Ü.]{.me} (2026). Native and learner verb preferences as predictors of passive use in L2 English writing. *Language and Cognition*, *18*, e78. [[doi](https://doi.org/10.1017/langcog.2026.10131) [data](https://osf.io/zt9md/)]{.links} [SSCI · open access]{.tag}
 :::
 
 ::: {.pub}

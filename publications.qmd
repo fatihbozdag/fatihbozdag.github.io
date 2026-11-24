@@ -7,13 +7,11 @@ Author's accepted or published versions are linked where the publisher permits. 
 
 ## Journal articles
 
-### In press {.pub-year}
+### 2026 {.pub-year}
 
 ::: {.pub}
-[Bozdağ, F. Ü.]{.me} (in press). Native and learner verb preferences as predictors of passive use in L2 English writing. *Language and Cognition*. [[doi](https://doi.org/10.1017/langcog.2026.10131) [data](https://osf.io/zt9md/)]{.links} [SSCI · in press]{.tag}
+[Bozdağ, F. Ü.]{.me} (2026). Native and learner verb preferences as predictors of passive use in L2 English writing. *Language and Cognition*, *18*, e78. [[doi](https://doi.org/10.1017/langcog.2026.10131) [data](https://osf.io/zt9md/)]{.links} [SSCI · open access]{.tag}
 :::
-
-### 2026 {.pub-year}
 
 ::: {.pub}
 [Bozdağ, F. Ü.]{.me} (2026). Modeling distributional stability in learner English passives: The Linguistic Clusters Framework. *Corpus Linguistics and Linguistic Theory*. Advance online publication. [[doi](https://doi.org/10.1515/cllt-2025-0141) [pdf](files/papers/bozdag-2026-cllt-linguistic-clusters.pdf) [code](https://github.com/fatihbozdag/linguistic_clusters) [data](https://osf.io/kq7gv/)]{.links} [SSCI · open access]{.tag}

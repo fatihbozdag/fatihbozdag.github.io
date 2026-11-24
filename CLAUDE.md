@@ -13,7 +13,7 @@ Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Tra
 - Images: `images/`. Profile photo should replace `images/profile.svg` (placeholder) — then change the reference in `index.qmd`.
 - Visitor statistics: GoatCounter (cookie-free, no consent banner needed), dashboard https://fatihbozdag.goatcounter.com. The script is in `_quarto.yml` (include-in-header) and, separately, in `stats/index.html`; keep both when editing either. Added 21 Nov 2026.
 - Link-preview image `images/og-image.png` (1200×630) is drawn by `scripts/make_og_image.py`; regenerate it when the position or research areas change (fonts: Source Serif 4 and Source Sans 3 variable TTFs from github.com/google/fonts, passed by path, not stored here). `404.qmd` is the custom not-found page; GitHub Pages serves it for any missing address.
-- `stats/index.html` is the statistics companion (standalone HTML, copied as a resource, not rendered by Quarto). It was imported on 30 Oct 2026 from the claude.ai artifact https://claude.ai/artifact/XpyrwrmwD2c3rq26Ym9rfB with only the document head adjusted (title and meta moved into <head>, site icon and preview tags added, byline linked to the home page). The site copy is canonical. Its research passages were checked against the paper texts on 30 Oct 2026; re-check any new figure, cite no manuscript under review, and re-check the Language and Cognition figures against the proofs.
+- `stats/index.html` is the statistics companion (standalone HTML, copied as a resource, not rendered by Quarto). It was imported on 30 Oct 2026 from the claude.ai artifact https://claude.ai/artifact/XpyrwrmwD2c3rq26Ym9rfB with only the document head adjusted (title and meta moved into <head>, site icon and preview tags added, byline linked to the home page). The site copy is canonical. Its research passages were checked against the paper texts on 30 Oct 2026; re-check any new figure, cite no manuscript under review, and the Language and Cognition figures were re-checked against the version of record on 24 Nov 2026.
 
 ## Stack
 
@@ -38,11 +38,10 @@ Personal academic website of Fatih Ünal Bozdağ (Dr. Öğr. Üyesi, English Tra
 ## Open to-dos
 
 1. Replace placeholder profile image with a real photo (`images/profile.jpg`, ~400×400, <200 KB).
-2. *Language and Cognition* article (DOI 10.1017/langcog.2026.10131) is listed as "in press" since 29 Oct 2026. When it appears online, replace "in press" with 2026, add the volume (18) and e-number in `publications.qmd`, `index.qmd` and `pubs/bozdag.bib`.
-3. Add the Lotus Congress 2026 abstract-book details when published.
-4. Add the website URL to ORCID, Google Scholar and YÖK Akademik (needs the author's logins). GitHub profile `blog` field set 30 Oct 2026.
-5. Optional: author post-prints for book chapters, if each publisher allows (Lingua accepted manuscript posted 30 Oct 2026).
-6. Optional: a short "News" or "Talks" list; no blog unless it will be maintained.
+2. Add the Lotus Congress 2026 abstract-book details when published.
+3. Add the website URL to ORCID, Google Scholar and YÖK Akademik (needs the author's logins). GitHub profile `blog` field set 30 Oct 2026.
+4. Optional: author post-prints for book chapters, if each publisher allows (Lingua accepted manuscript posted 30 Oct 2026).
+5. Optional: a short "News" or "Talks" list; no blog unless it will be maintained.
 
 ## People / identifiers
 
