@@ -251,7 +251,7 @@ const REFS={
  lingua:{st:"pub",key:"Bozdağ & Mo, 2026",apa:'Bozdağ, F. Ü., &amp; Mo, J. (2026). Cross-linguistic influence in upper-intermediate to advanced L2 construction learning: A multidimensional analysis of L1 effects on probability, frequency, diversity, and verb-construction associations. <i>Lingua, 341</i>, 104239. <a href="https://doi.org/10.1016/j.lingua.2026.104239" target="_blank" rel="noopener">https://doi.org/10.1016/j.lingua.2026.104239</a>'},
  passive:{st:"pub",key:"Bozdağ, 2026c",apa:'Bozdağ, F. Ü. (2026c). Native and learner verb preferences as predictors of passive use in L2 English writing. <i>Language and Cognition, 18</i>, e78. <a href="https://doi.org/10.1017/langcog.2026.10131" target="_blank" rel="noopener">https://doi.org/10.1017/langcog.2026.10131</a>'},
 };
-const STATUS={pub:["pub","Published"],press:["press","In press"]};
+const STATUS={pub:["pub","Published"]};
 function refLine(k){const r=REFS[k],s=STATUS[r.st];return `<div class="cite"><span class="status ${s[0]}">${s[1]}</span>${r.apa}</div>`}
 const PAPERS=[
  ["lingua","Cross-linguistic influence on construction learning","Bayesian hierarchical models of probability (Bernoulli, complementary log–log link, length offset), frequency (Poisson with offset and verb random effects) and lexical diversity (Student-t on entropy), with Fisher's exact collostructional analysis; 9,529 ICLE essays from 34 L1 backgrounds."],
